@@ -463,6 +463,11 @@
     nan "^2.14.2"
     prebuild-install "^7.1.1"
 
+"@cdktf/provider-aws@^17.0.5":
+  version "17.0.5"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-17.0.5.tgz#41b8ca203ed1f248f809a3d67e04c638cae9e379"
+  integrity sha512-vXuh+uLWj3Revdq9xGb8wZgjhNC4xcT/93Valr/4ky7jVCQJDkbf79iREQtGCKcb9+J7w1pbbdZGGiMP3CDWNA==
+
 "@cdktf/provider-generator@0.18.0":
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/@cdktf/provider-generator/-/provider-generator-0.18.0.tgz#250f24ae488b5f620224e12f3e3e027cdc0cdb32"

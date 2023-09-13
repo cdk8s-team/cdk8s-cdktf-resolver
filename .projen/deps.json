@@ -5,6 +5,10 @@
       "type": "build"
     },
     {
+      "name": "@cdktf/provider-aws",
+      "type": "build"
+    },
+    {
       "name": "@types/jest",
       "type": "build"
     },
@@ -116,10 +120,6 @@
     {
       "name": "typescript",
       "type": "build"
-    },
-    {
-      "name": "@aws-sdk/client-cloudformation",
-      "type": "bundled"
     },
     {
       "name": "cdk8s",
