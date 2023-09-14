@@ -10,7 +10,7 @@ function fetchOutputValue(output: tf.TerraformOutput) {
   // this takes care of resolving any form of value (e.g ITerraformAddressable) into its token representation.
   const outputValue = output.toTerraform().output[output.friendlyUniqueId].value;
 
-  // which can then be safely passed to the Tokenaization.resolve function.
+  // which can then be safely resolved.
   return tf.Tokenization.resolve(outputValue, {
     scope: output,
     preparing: false,
