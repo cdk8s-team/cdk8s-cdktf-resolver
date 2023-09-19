@@ -380,13 +380,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=@cdktf/provider-aws,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s,cdk8s-cli,cdktf,cdktf-cli,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,jsii-diff,npm-check-updates,standard-version,ts-jest,ts-node"
+          "exec": "npm-check-updates --upgrade --target=minor --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s,cdk8s-cli,cdktf,cdktf-cli,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,fs-extra,jest,jest-junit,jsii-diff,npm-check-updates,standard-version,ts-jest,ts-node"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @cdktf/provider-aws @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser cdk8s cdk8s-cli cdktf cdktf-cli constructs eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit jsii-diff npm-check-updates standard-version ts-jest ts-node"
+          "exec": "yarn upgrade @cdktf/provider-aws @types/fs-extra @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser cdk8s cdk8s-cli cdktf cdktf-cli constructs eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint fs-extra jest jest-junit jsii-diff npm-check-updates standard-version ts-jest ts-node"
         },
         {
           "exec": "npx projen"

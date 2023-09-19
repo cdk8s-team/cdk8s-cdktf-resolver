@@ -4,7 +4,7 @@ const project = new Cdk8sTeamJsiiProject({
   name: 'cdk8s-cdktf-resolver',
   projenrcTs: true,
   release: true,
-  devDeps: ['@cdk8s/projen-common', 'cdktf-cli', 'cdk8s-cli', '@cdktf/provider-aws'],
+  devDeps: ['@cdk8s/projen-common', 'cdktf-cli', 'cdk8s-cli', '@cdktf/provider-aws', 'fs-extra', '@types/fs-extra'],
   peerDeps: ['cdktf', 'cdk8s', 'constructs'],
   jsiiVersion: '^5',
 });

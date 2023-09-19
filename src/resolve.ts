@@ -20,7 +20,15 @@ export class CdktfResolver implements IResolver {
 
   constructor(props: CdktfResolverProps) {
     this.app = props.app;
+
+    // synthesize the app here (once) so we can later use
+    // `cdktf output --skip-synth`
+    this.app.synth();
+
+    // create a cdktf project with cdktf.json.
+    // this is required in order to run cdktf commands.
     this.projectDir = this.createProject();
+
   }
 
   public resolve(context: ResolutionContext) {
@@ -52,10 +60,6 @@ export class CdktfResolver implements IResolver {
 
   private createProject(): string {
 
-    // cdktf-cli validates the existence of cdktf.json (along with these keys)
-    // across all commands regardless of whether the command
-    // needs it or not.
-
     const cdktfJson = {
       // `cdktf output` doesn't actually use this value,
       // so we can put whatever we want here.
@@ -64,10 +68,7 @@ export class CdktfResolver implements IResolver {
     };
 
     const projectDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cdktf-project-'));
-    this.app.synth();
-
     fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
-
     return projectDir;
 
   }

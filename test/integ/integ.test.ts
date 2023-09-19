@@ -1,8 +1,8 @@
 import * as child from 'child_process';
-import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 import { Yaml } from 'cdk8s';
+import * as fs from 'fs-extra';
 
 /*************************************************************
  * ------------------ NOTICE -------------------------------
@@ -44,6 +44,10 @@ test('app', () => {
 
   try {
     execProgram(`${cdktf} deploy --auto-approve -o ${cdktfOutDir} --outputs-file ${outputsFilePath}`);
+
+    // delete the synthesized app to make sure we don't rely on it in the resolver
+    fs.removeSync(cdktfOutDir);
+
     execProgram(`${cdk8s} synth -o ${cdk8sOutDir} -a '${program}'`);
 
     const outputs = JSON.parse(fs.readFileSync(outputsFilePath, { encoding: 'utf-8' }));
