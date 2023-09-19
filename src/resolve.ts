@@ -1,3 +1,7 @@
+import { execFileSync } from 'child_process';
+import * as fs from 'fs';
+import * as os from 'os';
+import * as path from 'path';
 import { IResolver, ResolutionContext } from 'cdk8s';
 import { Token, TerraformOutput, TerraformStack, App, ITerraformAddressable } from 'cdktf';
 
@@ -12,9 +16,11 @@ export interface CdktfResolverProps {
 export class CdktfResolver implements IResolver {
 
   private readonly app: App;
+  private readonly projectDir: string;
 
   constructor(props: CdktfResolverProps) {
     this.app = props.app;
+    this.projectDir = this.createProject();
   }
 
   public resolve(context: ResolutionContext) {
@@ -44,6 +50,28 @@ export class CdktfResolver implements IResolver {
 
   }
 
+  private createProject(): string {
+
+    // cdktf-cli validates the existence of cdktf.json (along with these keys)
+    // across all commands regardless of whether the command
+    // needs it or not.
+
+    const cdktfJson = {
+      // `cdktf output` doesn't actually use this value,
+      // so we can put whatever we want here.
+      language: 'python',
+      app: this.app.outdir,
+    };
+
+    const projectDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cdktf-project-'));
+    this.app.synth();
+
+    fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
+
+    return projectDir;
+
+  }
+
   private findOutput(value: any): TerraformOutput {
 
     const inspectedStacks: TerraformStack[] = this.app.node.findAll().filter(c => TerraformStack.isStack(c)) as TerraformStack[];
@@ -63,8 +91,17 @@ export class CdktfResolver implements IResolver {
 
   }
 
-  private fetchOutputValue(_: TerraformOutput) {
-    return 'value';
+  private fetchOutputValue(output: TerraformOutput) {
+
+    const script = path.join(__dirname, '..', 'lib', 'fetch-output-value.js');
+    return JSON.parse(execFileSync(process.execPath, [
+      script,
+      this.projectDir,
+      this.app.outdir,
+      TerraformStack.of(output).node.id,
+      output.node.id,
+    ], { encoding: 'utf-8', stdio: ['pipe'] }).toString().trim());
+
   }
 
   private isAddressable(object: any): object is ITerraformAddressable {
