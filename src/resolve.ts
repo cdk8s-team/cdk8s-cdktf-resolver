@@ -37,7 +37,7 @@ export class CdktfResolver implements IResolver {
 
     const output = this.findOutput(context.value);
     try {
-      const outputValue = this.outputs[TerraformStack.of(output).node.id][output.node.id];
+      const outputValue = this.fetchOutputValue(output);
       context.replaceValue(outputValue);
     } catch (err) {
       // if both cdk8s and CDKTF applications are defined within the same file,
@@ -50,11 +50,11 @@ export class CdktfResolver implements IResolver {
 
   }
 
-  private get outputs(): any {
+  private fetchOutputValue(output: TerraformOutput) {
     if (!this._outputs) {
       this._outputs = this.fetchOutputs();
     }
-    return this._outputs;
+    return this._outputs[TerraformStack.of(output).node.id][output.node.id];
   }
 
   private fetchOutputs(): any {
@@ -74,13 +74,20 @@ export class CdktfResolver implements IResolver {
       };
 
       // create our own copy of the synthesized app so we can safely clean it up
-      copyDirectoryRecursive(this.app.outdir, path.join(projectDir, cdktfJson.app));
+      copyDirectory(this.app.outdir, path.join(projectDir, cdktfJson.app));
+
+      // write the configuration file as it is required for any cdktf command
+      fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
 
       const stacks = this.app.node.findAll().filter(c => TerraformStack.isStack(c)).map(c => c.node.id);
-      fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
-      child.execSync(`cdktf output --skip-synth --output ${cdktfJson.app} --outputs-file ${path.join(projectDir, outputsFile)} ${stacks.join(',')}`, {
-        cwd: projectDir,
-      });
+
+      const command = ['cdktf output',
+        '--skip-synth',
+        `--output ${cdktfJson.app}`,
+        `--outputs-file ${outputsFile}`,
+        `${stacks.join(',')}`];
+
+      child.execSync(command.join(' '), { cwd: projectDir });
 
       return JSON.parse(fs.readFileSync(path.join(projectDir, outputsFile), { encoding: 'utf-8' }));
 
@@ -115,7 +122,7 @@ export class CdktfResolver implements IResolver {
 
 }
 
-function copyDirectoryRecursive(sourceDir: string, targetDir: string): void {
+function copyDirectory(sourceDir: string, targetDir: string): void {
   if (!fs.existsSync(targetDir)) {
     fs.mkdirSync(targetDir);
   }
@@ -127,7 +134,7 @@ function copyDirectoryRecursive(sourceDir: string, targetDir: string): void {
     const stats = fs.statSync(sourceFilePath);
 
     if (stats.isDirectory()) {
-      copyDirectoryRecursive(sourceFilePath, targetFilePath);
+      copyDirectory(sourceFilePath, targetFilePath);
     } else if (stats.isFile()) {
       fs.copyFileSync(sourceFilePath, targetFilePath);
     }
