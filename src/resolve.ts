@@ -1,4 +1,4 @@
-import { execFileSync } from 'child_process';
+import * as child from 'child_process';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
@@ -16,19 +16,11 @@ export interface CdktfResolverProps {
 export class CdktfResolver implements IResolver {
 
   private readonly app: App;
-  private readonly projectDir: string;
+
+  private _outputs: any;
 
   constructor(props: CdktfResolverProps) {
     this.app = props.app;
-
-    // synthesize the app here (once) so we can later use
-    // `cdktf output --skip-synth`
-    this.app.synth();
-
-    // create a cdktf project with cdktf.json.
-    // this is required in order to run cdktf commands.
-    this.projectDir = this.createProject();
-
   }
 
   public resolve(context: ResolutionContext) {
@@ -45,12 +37,12 @@ export class CdktfResolver implements IResolver {
 
     const output = this.findOutput(context.value);
     try {
-      const outputValue = this.fetchOutputValue(output);
+      const outputValue = this.outputs[TerraformStack.of(output).node.id][output.node.id];
       context.replaceValue(outputValue);
     } catch (err) {
-      // if both cdk8s and AWS CDK applications are defined within the same file,
-      // a cdk8s synth is going to happen before the AWS CDK deployment.
-      // in this case we must swallow the error, otherwise the AWS CDK deployment
+      // if both cdk8s and CDKTF applications are defined within the same file,
+      // a cdk8s synth is going to happen before the CDKTF deployment.
+      // in this case we must swallow the error, otherwise the CDKTF deployment
       // won't be able to go through. we replace the value with something to indicate
       // that a fetching attempt was made and failed.
       context.replaceValue(`Failed fetching value for output ${output.node.path}: ${err}`);
@@ -58,19 +50,43 @@ export class CdktfResolver implements IResolver {
 
   }
 
-  private createProject(): string {
+  private get outputs(): any {
+    if (!this._outputs) {
+      this._outputs = this.fetchOutputs();
+    }
+    return this._outputs;
+  }
 
-    const cdktfJson = {
-      // `cdktf output` doesn't actually use this value,
-      // so we can put whatever we want here.
-      language: 'python',
-      app: this.app.outdir,
-    };
+  private fetchOutputs(): any {
 
     const projectDir = fs.mkdtempSync(path.join(os.tmpdir(), 'cdktf-project-'));
-    fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
-    return projectDir;
+    const outputsFile = 'outputs.json';
 
+    try {
+
+      this.app.synth();
+
+      const cdktfJson = {
+        // `cdktf output` doesn't actually use this value,
+        // so we can put whatever we want here.
+        language: 'python',
+        app: 'cdktf.out',
+      };
+
+      // create our own copy of the synthesized app so we can safely clean it up
+      copyDirectoryRecursive(this.app.outdir, path.join(projectDir, cdktfJson.app));
+
+      const stacks = this.app.node.findAll().filter(c => TerraformStack.isStack(c)).map(c => c.node.id);
+      fs.writeFileSync(path.join(projectDir, 'cdktf.json'), JSON.stringify(cdktfJson));
+      child.execSync(`cdktf output --skip-synth --output ${cdktfJson.app} --outputs-file ${path.join(projectDir, outputsFile)} ${stacks.join(',')}`, {
+        cwd: projectDir,
+      });
+
+      return JSON.parse(fs.readFileSync(path.join(projectDir, outputsFile), { encoding: 'utf-8' }));
+
+    } finally {
+      fs.rmSync(projectDir, { recursive: true });
+    }
   }
 
   private findOutput(value: any): TerraformOutput {
@@ -92,22 +108,28 @@ export class CdktfResolver implements IResolver {
 
   }
 
-  private fetchOutputValue(output: TerraformOutput) {
-
-    const script = path.join(__dirname, '..', 'lib', 'fetch-output-value.js');
-    return JSON.parse(execFileSync(process.execPath, [
-      script,
-      this.projectDir,
-      this.app.outdir,
-      TerraformStack.of(output).node.id,
-      output.node.id,
-    ], { encoding: 'utf-8', stdio: ['pipe'] }).toString().trim());
-
-  }
-
   private isAddressable(object: any): object is ITerraformAddressable {
     return object && typeof object === 'object' && !Array.isArray(object) && 'fqn' in object;
   }
 
 
+}
+
+function copyDirectoryRecursive(sourceDir: string, targetDir: string): void {
+  if (!fs.existsSync(targetDir)) {
+    fs.mkdirSync(targetDir);
+  }
+  const files = fs.readdirSync(sourceDir);
+
+  for (const file of files) {
+    const sourceFilePath = path.join(sourceDir, file);
+    const targetFilePath = path.join(targetDir, file);
+    const stats = fs.statSync(sourceFilePath);
+
+    if (stats.isDirectory()) {
+      copyDirectoryRecursive(sourceFilePath, targetFilePath);
+    } else if (stats.isFile()) {
+      fs.copyFileSync(sourceFilePath, targetFilePath);
+    }
+  }
 }

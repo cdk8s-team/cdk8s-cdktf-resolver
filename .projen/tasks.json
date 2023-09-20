@@ -153,7 +153,7 @@
       "name": "integ",
       "steps": [
         {
-          "exec": "jest --testMatch \"<rootDir>/test/integ/**/*.test.ts\" --testPathIgnorePatterns \"/node_modules/\" --passWithNoTests --all --updateSnapshot --coverageProvider=v8 integ/integ.test.ts"
+          "exec": "jest --verbose --testMatch \"<rootDir>/test/integ/**/*.test.ts\" --testPathIgnorePatterns \"/node_modules/\" --passWithNoTests --all --updateSnapshot --coverageProvider=v8 integ/integ.test.ts"
         }
       ]
     },
