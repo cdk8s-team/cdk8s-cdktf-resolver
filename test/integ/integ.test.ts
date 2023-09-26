@@ -1,23 +1,17 @@
-import * as child from 'child_process';
 import * as os from 'os';
 import * as path from 'path';
 import { Yaml } from 'cdk8s';
 import * as fs from 'fs-extra';
-
-/*************************************************************
- * ------------------ NOTICE -------------------------------
- * Make sure you `yarn compile` before running these
- * tests to operate against the latest compiled version
- * of `fetch-output-value.ts`
- ***************************************/
+import { execSync } from '../../src/exec';
 
 test('app', () => {
 
   const appDir = __dirname;
   const appFile = 'app.ts';
   const program = `npx ts-node ${path.join(appDir, appFile)}`;
-  const stackName = 'cdk8s-cdktf-resolver-single-stack-app-integ-stack';
-  const chartName = 'cdk8s-cdktf-resolver-single-stack-app-integ-chart';
+  const stack1Name = 'cdk8s-cdktf-resolver-app-integ-stack-1';
+  const stack2Name = 'cdk8s-cdktf-resolver-app-integ-stack-2';
+  const chartName = 'cdk8s-cdktf-resolver-app-integ-chart';
 
   const outTempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'app-test-'));
   const cdktfOutDir = path.join(outTempDir, 'cdktf.out');
@@ -25,16 +19,16 @@ test('app', () => {
   const outputsFilePath = path.join(outTempDir, 'outputs.json');
 
   function execProgram(command: string) {
-    child.execSync(command, {
+    execSync(command, {
       cwd: appDir,
       env: {
         ...process.env,
         CDKTF_OUT_DIR: cdktfOutDir,
         CDK8S_OUT_DIR: cdk8sOutDir,
-        STACK_NAME: stackName,
+        STACK1_NAME: stack1Name,
+        STACK2_NAME: stack2Name,
         CHART_NAME: chartName,
       },
-      stdio: ['inherit'],
     });
   }
 
@@ -43,7 +37,7 @@ test('app', () => {
   const cdk8s = path.join(bin, 'cdk8s');
 
   try {
-    execProgram(`${cdktf} deploy --auto-approve -o ${cdktfOutDir} --outputs-file ${outputsFilePath}`);
+    execProgram(`${cdktf} deploy --auto-approve -o ${cdktfOutDir} --outputs-file ${outputsFilePath} ${stack1Name} ${stack2Name}`);
 
     // delete the synthesized app to make sure we don't rely on it in the resolver
     fs.removeSync(cdktfOutDir);
@@ -54,10 +48,12 @@ test('app', () => {
     const manifest = Yaml.load(path.join(cdk8sOutDir, `${chartName}.k8s.yaml`));
 
     // validate that the manifest indeed includes the correct outputs
+    console.log(JSON.stringify(manifest));
+    console.log(JSON.stringify(outputs));
     expect(outputs).toStrictEqual(manifest[0].data.Outputs);
 
   } finally {
-    execProgram(`${cdktf} destroy --auto-approve -o ${cdktfOutDir}`);
+    execProgram(`${cdktf} destroy --auto-approve -o ${cdktfOutDir} ${stack1Name} ${stack2Name}`);
   }
 
 });

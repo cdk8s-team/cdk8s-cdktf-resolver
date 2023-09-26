@@ -1,9 +1,9 @@
-import * as child from 'child_process';
 import * as fs from 'fs';
 import * as os from 'os';
 import * as path from 'path';
 import { IResolver, ResolutionContext } from 'cdk8s';
 import { Token, TerraformOutput, TerraformStack, App, ITerraformAddressable } from 'cdktf';
+import { execSync } from './exec';
 
 export interface CdktfResolverProps {
 
@@ -54,7 +54,14 @@ export class CdktfResolver implements IResolver {
     if (!this._outputs) {
       this._outputs = this.fetchOutputs();
     }
-    return this._outputs[TerraformStack.of(output).node.id][output.node.id];
+
+    let parent = this._outputs;
+
+    for (const scope of output.node.scopes.slice(1, -1)) {
+      parent = parent[scope.node.id];
+    }
+
+    return parent[output.node.id];
   }
 
   private fetchOutputs(): any {
@@ -85,9 +92,9 @@ export class CdktfResolver implements IResolver {
         '--skip-synth',
         `--output ${cdktfJson.app}`,
         `--outputs-file ${outputsFile}`,
-        `${stacks.join(',')}`];
+        `${stacks.join(' ')}`];
 
-      child.execSync(command.join(' '), { cwd: projectDir });
+      execSync(command.join(' '), { cwd: projectDir });
 
       return JSON.parse(fs.readFileSync(path.join(projectDir, outputsFile), { encoding: 'utf-8' }));
 

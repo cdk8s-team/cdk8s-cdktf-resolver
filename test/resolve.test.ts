@@ -5,24 +5,10 @@ import * as resolve from '../src/resolve';
 
 const tfResolver = new tf.DefaultTokenResolver(new tf.StringConcat());
 
-function fetchOutputValue(output: tf.TerraformOutput) {
-
-  // this takes care of resolving any form of value (e.g ITerraformAddressable) into its token representation.
-  const outputValue = output.toTerraform().output[output.friendlyUniqueId].value;
-
-  // which can then be safely resolved.
-  return tf.Tokenization.resolve(outputValue, {
-    scope: output,
-    preparing: false,
-    resolver: tfResolver,
-  },
-  );
-}
-
 test('can resolve direct output value', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -44,6 +30,8 @@ test('can resolve direct output value', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -61,7 +49,7 @@ test('can resolve direct output value', () => {
 test('can resolve indirect output value', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -84,6 +72,8 @@ test('can resolve indirect output value', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -101,7 +91,7 @@ test('can resolve indirect output value', () => {
 test('can resolve numbers', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -123,6 +113,8 @@ test('can resolve numbers', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -140,7 +132,7 @@ test('can resolve numbers', () => {
 test('can resolve booleans', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -162,6 +154,8 @@ test('can resolve booleans', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -179,7 +173,7 @@ test('can resolve booleans', () => {
 test('can resolve token maps', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -201,6 +195,8 @@ test('can resolve token maps', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -218,7 +214,7 @@ test('can resolve token maps', () => {
 test('cannot resolve literal maps', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -241,6 +237,8 @@ test('cannot resolve literal maps', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   // note the error message refers to the `bucketName` token, instead of the output value.
   // this is unfortunate, but unavoidable because the literal map is traversed by the ubmrella resolving logic
   // in cdk8s-core, and the value being passed to and inspected by this resolver is only `bucketName`.
@@ -252,7 +250,7 @@ test('cannot resolve literal maps', () => {
 test('can resolve token arrays', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -274,6 +272,8 @@ test('can resolve token arrays', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -291,7 +291,7 @@ test('can resolve token arrays', () => {
 test('cannot resolve literal arrays', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -314,6 +314,8 @@ test('cannot resolve literal arrays', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   // note the error message refers to the `bucketName` token, instead of the output value.
   // this is unfortunate, but unavoidable because the literal array is traversed by the ubmrella resolving logic
   // in cdk8s-core, and the value being passed to and inspected by this resolver is only `bucketName`.
@@ -325,7 +327,7 @@ test('cannot resolve literal arrays', () => {
 test('can resolve expressions', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -347,6 +349,8 @@ test('can resolve expressions', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -361,10 +365,52 @@ test('can resolve expressions', () => {
   `);
 });
 
+test('can resolve nested output value', () => {
+  const awsApp = new tf.App();
+
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
+
+  const stack = new tf.TerraformStack(awsApp, 'Stack');
+  const chart = new cdk8s.Chart(
+    cdk8s.Testing.app({ resolvers: [resolver] }),
+    'Chart',
+  );
+
+  const bucket = new aws.s3Bucket.S3Bucket(stack, 'Bucket');
+
+  const output = new tf.TerraformOutput(bucket, 'Output', {
+    value: bucket.bucket,
+  });
+
+  const obj = new cdk8s.ApiObject(chart, 'ApiObject', {
+    apiVersion: 'v1',
+    kind: 'Struct',
+    spec: {
+      prop1: output.value,
+    },
+  });
+
+  mockOutputs(resolver, awsApp);
+
+  expect(obj.toJson()).toMatchInlineSnapshot(`
+    Object {
+      "apiVersion": "v1",
+      "kind": "Struct",
+      "metadata": Object {
+        "name": "chart-apiobject-c830d7bd",
+      },
+      "spec": Object {
+        "prop1": "\${aws_s3_bucket.Bucket.bucket}",
+      },
+    }
+  `);
+
+});
+
 test('can resolve resource', () => {
   const awsApp = new tf.App();
 
-  const resolver = createResolver(awsApp);
+  const resolver = new resolve.CdktfResolver({ app: awsApp });
 
   const stack = new tf.TerraformStack(awsApp, 'Stack');
   const chart = new cdk8s.Chart(
@@ -386,6 +432,8 @@ test('can resolve resource', () => {
     },
   });
 
+  mockOutputs(resolver, awsApp);
+
   expect(obj.toJson()).toMatchInlineSnapshot(`
     Object {
       "apiVersion": "v1",
@@ -400,8 +448,39 @@ test('can resolve resource', () => {
   `);
 });
 
-function createResolver(app: tf.App) {
-  const resolver = new resolve.CdktfResolver({ app });
-  (resolver as any).fetchOutputValue = fetchOutputValue;
-  return resolver;
+function resolveOutput(output: tf.TerraformOutput) {
+
+  // this takes care of resolving any form of value (e.g ITerraformAddressable) into its token representation.
+  const outputValue = output.toTerraform().output[output.friendlyUniqueId].value;
+
+  // which can then be safely resolved.
+  return tf.Tokenization.resolve(outputValue, {
+    scope: output,
+    preparing: false,
+    resolver: tfResolver,
+  });
+}
+
+function mockOutputs(resolver: resolve.CdktfResolver, app: tf.App) {
+
+  const mocked: any = {};
+  const outputs = app.node.findAll().filter((c) => tf.TerraformOutput.isTerraformOutput(c)) as tf.TerraformOutput[];
+
+  for (const output of outputs) {
+    let parent = mocked;
+    for (const scope of output.node.scopes.slice(1, -1)) {
+      if (parent[scope.node.id] == null) {
+        parent[scope.node.id] = {};
+      }
+      parent = parent[scope.node.id];
+    }
+
+    // the resolved output is a stable and unique value, hence suitable for tests.
+    // it also lets us inspect how tf templates actually look like in these scenarios.
+    const value = resolveOutput(output);
+
+    parent[output.node.id] = value;
+  }
+
+  (resolver as any).fetchOutputs = () => mocked;
 }
