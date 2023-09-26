@@ -1,6 +1,7 @@
 import * as aws from '@cdktf/provider-aws';
 import * as cdk8s from 'cdk8s';
 import * as tf from 'cdktf';
+import * as outputs from './outputs';
 import * as resolve from '../src/resolve';
 
 const tfResolver = new tf.DefaultTokenResolver(new tf.StringConcat());
@@ -404,7 +405,6 @@ test('can resolve nested output value', () => {
       },
     }
   `);
-
 });
 
 test('can resolve resource', () => {
@@ -449,9 +449,9 @@ test('can resolve resource', () => {
 });
 
 function resolveOutput(output: tf.TerraformOutput) {
-
   // this takes care of resolving any form of value (e.g ITerraformAddressable) into its token representation.
-  const outputValue = output.toTerraform().output[output.friendlyUniqueId].value;
+  const outputValue =
+    output.toTerraform().output[output.friendlyUniqueId].value;
 
   // which can then be safely resolved.
   return tf.Tokenization.resolve(outputValue, {
@@ -462,25 +462,8 @@ function resolveOutput(output: tf.TerraformOutput) {
 }
 
 function mockOutputs(resolver: resolve.CdktfResolver, app: tf.App) {
-
-  const mocked: any = {};
-  const outputs = app.node.findAll().filter((c) => tf.TerraformOutput.isTerraformOutput(c)) as tf.TerraformOutput[];
-
-  for (const output of outputs) {
-    let parent = mocked;
-    for (const scope of output.node.scopes.slice(1, -1)) {
-      if (parent[scope.node.id] == null) {
-        parent[scope.node.id] = {};
-      }
-      parent = parent[scope.node.id];
-    }
-
-    // the resolved output is a stable and unique value, hence suitable for tests.
-    // it also lets us inspect how tf templates actually look like in these scenarios.
-    const value = resolveOutput(output);
-
-    parent[output.node.id] = value;
-  }
-
+  const mocked = outputs.buildOutputsData(app, (output: tf.TerraformOutput) =>
+    resolveOutput(output),
+  );
   (resolver as any).fetchOutputs = () => mocked;
 }

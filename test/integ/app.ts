@@ -3,6 +3,7 @@ import * as k8s from 'cdk8s';
 import * as tf from 'cdktf';
 import { Construct } from 'constructs';
 import * as resolver from '../../src';
+import { buildOutputsData } from '../outputs';
 
 const cdktfOutDir = process.env.CDKTF_OUT_DIR ?? 'cdktf.out';
 const cdk8sOutDir = process.env.CDK8S_OUT_DIR ?? 'dist';
@@ -24,7 +25,7 @@ new k8s.ApiObject(chart, 'ConfigMap', {
   apiVersion: 'v1',
   kind: 'ConfigMap',
   data: {
-    Outputs: buildOutputsData(),
+    Outputs: buildOutputsData(awsApp, (output: tf.TerraformOutput) => output.value),
   },
 });
 
@@ -59,23 +60,6 @@ function addStack(stackName: string) {
 
   new tf.S3Backend(stack, { bucket: 'cdk8s-cdktf-resolver-integ-tests-terraform', key: `${stackName}.state`, region });
 
-}
-
-function buildOutputsData() {
-
-  const outputsData: any = {};
-
-  const stacks = awsApp.node.findAll().filter(c => tf.TerraformStack.isStack(c)) as tf.TerraformStack[];
-
-  for (const stack of stacks) {
-    outputsData[stack.node.id] = {};
-    for (const output of stack.node.findAll().filter(c => tf.TerraformOutput.isTerraformOutput(c)) as tf.TerraformOutput[]) {
-      outputsData[stack.node.id][output.node.id] = output.value;
-    }
-  }
-
-
-  return outputsData;
 }
 
 awsApp.synth();

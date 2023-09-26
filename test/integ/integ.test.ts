@@ -37,7 +37,8 @@ test('app', () => {
   const cdk8s = path.join(bin, 'cdk8s');
 
   try {
-    execProgram(`${cdktf} deploy --auto-approve -o ${cdktfOutDir} --outputs-file ${outputsFilePath} ${stack1Name} ${stack2Name}`);
+    execProgram(`${cdktf} deploy --auto-approve -o ${cdktfOutDir} ${stack1Name} ${stack2Name}`);
+    execProgram(`${cdktf} output --skip-synth --output ${cdktfOutDir} --outputs-file ${outputsFilePath} ${stack1Name} ${stack2Name}`);
 
     // delete the synthesized app to make sure we don't rely on it in the resolver
     fs.removeSync(cdktfOutDir);
@@ -48,8 +49,6 @@ test('app', () => {
     const manifest = Yaml.load(path.join(cdk8sOutDir, `${chartName}.k8s.yaml`));
 
     // validate that the manifest indeed includes the correct outputs
-    console.log(JSON.stringify(manifest));
-    console.log(JSON.stringify(outputs));
     expect(outputs).toStrictEqual(manifest[0].data.Outputs);
 
   } finally {

@@ -55,13 +55,9 @@ export class CdktfResolver implements IResolver {
       this._outputs = this.fetchOutputs();
     }
 
-    let parent = this._outputs;
+    const stack = TerraformStack.of(output);
 
-    for (const scope of output.node.scopes.slice(1, -1)) {
-      parent = parent[scope.node.id];
-    }
-
-    return parent[output.node.id];
+    return this._outputs[stack.node.id][output.friendlyUniqueId];
   }
 
   private fetchOutputs(): any {
