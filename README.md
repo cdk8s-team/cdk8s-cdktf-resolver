@@ -15,7 +15,7 @@ import { CdkTfResolver } from '@cdk8s/cdktf-resolver';
 const awsApp = new tf.App();
 const stack = new tf.TerraformStack(awsApp, 'aws');
 
-const k8sApp = new k8s.App({ resolver: new CdkTfResolver() });
+const k8sApp = new k8s.App({ resolvers: [new CdkTfResolver()] });
 const manifest = new k8s.Chart(k8sApp, 'Manifest', { resolver });
 
 const bucket = new aws.s3Bucket.S3Bucket(stack, 'Bucket');
@@ -141,7 +141,7 @@ import { bucketName } from 'my-cdktf-app';
 
 import { CdkTfResolver } from '@cdk8s/cdktf-resolver';
 
-const k8sApp = new k8s.App({ resolver: new CdkTfResolver() });
+const k8sApp = new k8s.App({ resolvers: [new CdkTfResolver()] });
 const manifest = new k8s.Chart(k8sApp, 'Manifest');
 
 new kplus.CronJob(manifest, 'CronJob', {
