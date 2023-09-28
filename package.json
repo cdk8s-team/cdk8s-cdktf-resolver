@@ -1,5 +1,5 @@
 {
-  "name": "cdk8s-cdktf-resolver",
+  "name": "@cdk8s/cdktf-resolver",
   "repository": {
     "type": "git",
     "url": "https://github.com/cdk8s-team/cdk8s-cdktf-resolver.git"

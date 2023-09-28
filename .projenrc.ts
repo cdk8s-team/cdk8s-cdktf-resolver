@@ -1,7 +1,7 @@
 import { Cdk8sTeamJsiiProject } from '@cdk8s/projen-common';
 const project = new Cdk8sTeamJsiiProject({
   defaultReleaseBranch: 'main',
-  name: 'cdk8s-cdktf-resolver',
+  name: '@cdk8s/cdktf-resolver',
   projenrcTs: true,
   release: true,
   devDeps: ['@cdk8s/projen-common', 'cdktf-cli', 'cdk8s-cli', '@cdktf/provider-aws', 'fs-extra', '@types/fs-extra'],
