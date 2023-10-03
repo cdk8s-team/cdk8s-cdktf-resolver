@@ -33,7 +33,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "",
-        "RELEASABLE_COMMITS": "git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\\([^()[:space:]]+\\))?(!)?:[[:blank:]]+.+'"
+        "RELEASABLE_COMMITS": "git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\\([^()[:space:]]+\\))?(!)?:[[:blank:]]+.+' --grep 'chore\\(deps\\): upgrade runtime dependencies' --grep 'chore\\(deps\\): upgrade compiler dependencies'"
       },
       "steps": [
         {
@@ -307,7 +307,7 @@
         "BUMPFILE": "dist/version.txt",
         "RELEASETAG": "dist/releasetag.txt",
         "RELEASE_TAG_PREFIX": "",
-        "RELEASABLE_COMMITS": "git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\\([^()[:space:]]+\\))?(!)?:[[:blank:]]+.+'"
+        "RELEASABLE_COMMITS": "git log --no-merges --oneline $LATEST_TAG..HEAD -E --grep '^(feat|fix){1}(\\([^()[:space:]]+\\))?(!)?:[[:blank:]]+.+' --grep 'chore\\(deps\\): upgrade runtime dependencies' --grep 'chore\\(deps\\): upgrade compiler dependencies'"
       },
       "steps": [
         {
@@ -326,7 +326,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=jsii,jsii-docgen,jsii-pacmak,jsii-rosetta,typescript"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=jsii,jsii-docgen,jsii-pacmak,jsii-rosetta,typescript"
         },
         {
           "exec": "yarn install --check-files"
@@ -353,7 +353,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=projen,@cdk8s/projen-common"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=projen,@cdk8s/projen-common"
         },
         {
           "exec": "yarn install --check-files"
@@ -380,7 +380,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s,cdk8s-cli,cdktf,cdktf-cli,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,fs-extra,jest,jest-junit,jsii-diff,npm-check-updates,standard-version,ts-jest,ts-node"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s,cdk8s-cli,cdktf,cdktf-cli,constructs,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,fs-extra,jest,jest-junit,jsii-diff,npm-check-updates,standard-version,ts-jest,ts-node"
         },
         {
           "exec": "yarn install --check-files"
@@ -407,7 +407,7 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --filter=cdk8s,cdktf,constructs"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=peer,prod,optional --filter=cdk8s,cdktf,constructs"
         },
         {
           "exec": "yarn install --check-files"
