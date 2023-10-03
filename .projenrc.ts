@@ -1,4 +1,5 @@
 import { Cdk8sTeamJsiiProject } from '@cdk8s/projen-common';
+import { NpmAccess } from 'projen/lib/javascript';
 const project = new Cdk8sTeamJsiiProject({
   defaultReleaseBranch: 'main',
   name: '@cdk8s/cdktf-resolver',
@@ -7,6 +8,17 @@ const project = new Cdk8sTeamJsiiProject({
   devDeps: ['@cdk8s/projen-common', 'cdktf-cli', 'cdk8s-cli', '@cdktf/provider-aws', 'fs-extra', '@types/fs-extra'],
   peerDeps: ['cdktf', 'cdk8s', 'constructs'],
   jsiiVersion: '^5',
+  releaseWorkflowSetupSteps: [
+    {
+      uses: 'aws-actions/configure-aws-credentials@v3',
+      with: {
+        'aws-region': 'us-east-1',
+        'role-to-assume': '${{ secrets.AWS_ROLE_TO_ASSUME }}',
+        'role-session-name': 'cdk8s-awscdk-resolver-release',
+      },
+    },
+  ],
+  npmAccess: NpmAccess.PUBLIC,
 });
 
 // ignore integ tests because we will add a dedicated task
@@ -21,6 +33,10 @@ integTask.exec(jest('integ/integ.test.ts'));
 // issues which are not worth the effort at this moment.
 const releaseTask = project.tasks.tryFind('release')!;
 releaseTask.exec(`npx projen ${integTask.name}`);
+
+// required for OIDC authentication
+const releaseWorkflow = project.tryFindObjectFile('.github/workflows/release.yml');
+releaseWorkflow!.addOverride('jobs.release.permissions.id-token', 'write');
 
 project.synth();
 

@@ -49,7 +49,7 @@
     "@types/node": "^16",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "cdk8s": "0.0.0",
+    "cdk8s": "2.66.2",
     "cdk8s-cli": "^2.83.0",
     "cdktf": "0.18.0",
     "cdktf-cli": "^0.18.0",
@@ -74,7 +74,7 @@
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
-    "cdk8s": "^0.0.0",
+    "cdk8s": "^2.66.2",
     "cdktf": "^0.18.0",
     "constructs": "^10.2.70"
   },
@@ -83,6 +83,9 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
