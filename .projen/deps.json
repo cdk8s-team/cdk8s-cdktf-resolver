@@ -23,12 +23,12 @@
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
-      "version": "^5",
+      "version": "^6",
       "type": "build"
     },
     {
       "name": "@typescript-eslint/parser",
-      "version": "^5",
+      "version": "^6",
       "type": "build"
     },
     {
@@ -128,6 +128,11 @@
     {
       "name": "typescript",
       "type": "build"
+    },
+    {
+      "name": "**/downlevel-dts/**/typescript",
+      "version": "~5.2.2",
+      "type": "override"
     },
     {
       "name": "cdk8s",
