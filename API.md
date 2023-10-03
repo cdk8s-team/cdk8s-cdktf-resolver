@@ -15,7 +15,7 @@ import { CdkTfResolver } from '@cdk8s/cdktf-resolver';
 const awsApp = new tf.App();
 const stack = new tf.TerraformStack(awsApp, 'aws');
 
-const k8sApp = new k8s.App({ resolvers: [new CdkTfResolver()] });
+const k8sApp = new k8s.App({ resolvers: [new resolver.CdktfResolver({ app: awsApp })] });
 const manifest = new k8s.Chart(k8sApp, 'Manifest', { resolver });
 
 const bucket = new aws.s3Bucket.S3Bucket(stack, 'Bucket');
@@ -102,7 +102,8 @@ import * as aws from "@cdktf/provider-aws";
 
 import { CdkTfResolver } from '@cdk8s/cdktf-resolver';
 
-const awsApp = new tf.App();
+// export the app so we can pass it to the cdk8s resolver
+export const awsApp = new tf.App();
 const stack = new tf.TerraformStack(awsApp, 'aws');
 
 const bucket = new aws.s3Bucket.S3Bucket(stack, 'Bucket');
@@ -137,11 +138,11 @@ import * as k8s from 'cdk8s';
 import * as kplus from 'cdk8s-plus-27';
 
 // import the desired instance from the CDKTF app.
-import { bucketName } from 'my-cdktf-app';
+import { bucketName, awsApp } from 'my-cdktf-app';
 
 import { CdkTfResolver } from '@cdk8s/cdktf-resolver';
 
-const k8sApp = new k8s.App({ resolvers: [new CdkTfResolver()] });
+const k8sApp = new k8s.App({ resolvers: [new resolver.CdktfResolver({ app: awsApp })] });
 const manifest = new k8s.Chart(k8sApp, 'Manifest');
 
 new kplus.CronJob(manifest, 'CronJob', {
