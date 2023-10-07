@@ -5393,25 +5393,6 @@ jsii-pacmak@^1.87.0, jsii-pacmak@^1.90.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-pacmak@^1.89.0:
-  version "1.89.0"
-  resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.89.0.tgz#587d4437b582a5dae7644c78e0b477fca1ae2749"
-  integrity sha512-fEvXWBdIOz1WyPrpZRbDaaV1f3UyAN8vYIhzH8mtLklsdFUkS3SZdfFJWEKsa6gjILT+4/CqBtLOEZE0iHy0bg==
-  dependencies:
-    "@jsii/check-node" "1.89.0"
-    "@jsii/spec" "^1.89.0"
-    clone "^2.1.2"
-    codemaker "^1.89.0"
-    commonmark "^0.30.0"
-    escape-string-regexp "^4.0.0"
-    fs-extra "^10.1.0"
-    jsii-reflect "^1.89.0"
-    jsii-rosetta "^1.89.0"
-    semver "^7.5.4"
-    spdx-license-list "^6.7.0"
-    xmlbuilder "^15.1.1"
-    yargs "^16.2.0"
-
 jsii-reflect@^1.89.0, jsii-reflect@^1.90.0:
   version "1.90.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.90.0.tgz#7a141c85084c37f6e2d4faa5b5ab4a238e28a034"
@@ -5424,7 +5405,7 @@ jsii-reflect@^1.89.0, jsii-reflect@^1.90.0:
     oo-ascii-tree "^1.90.0"
     yargs "^16.2.0"
 
-jsii-rosetta@^1.89.0, jsii-rosetta@^1.90.0:
+jsii-rosetta@^1.90.0:
   version "1.90.0"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-1.90.0.tgz#68698a29bdf82f30a6c2000eb551a8d6db8c42a3"
   integrity sha512-UN9kUl12CwulaIad/7wdRQpBLBP8EA9ESj0pMP/BhBfJnfvdn+uRL8rmL7JR4TUKV9D+VR8AOmZpGU/IKA0QBQ==
