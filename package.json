@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.459",
+    "@cdk8s/projen-common": "0.0.460",
     "@cdktf/provider-aws": "^17.0.10",
     "@types/fs-extra": "^11.0.2",
     "@types/jest": "^27",
