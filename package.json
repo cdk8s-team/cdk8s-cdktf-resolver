@@ -50,7 +50,7 @@
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
     "cdk8s": "2.66.10",
-    "cdk8s-cli": "^2.141.0",
+    "cdk8s-cli": "^2.143.0",
     "cdktf": "0.18.2",
     "cdktf-cli": "^0.18.2",
     "constructs": "10.3.0",
