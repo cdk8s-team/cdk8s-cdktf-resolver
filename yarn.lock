@@ -1824,7 +1824,7 @@ archiver@5.3.1:
     tar-stream "^2.2.0"
     zip-stream "^4.1.0"
 
-archiver@^5.3.1:
+archiver@5.3.2, archiver@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/archiver/-/archiver-5.3.2.tgz#99991d5957e53bd0303a392979276ac4ddccf3b0"
   integrity sha512-+25nxyyznAXF7Nef3y0EbBeqmGZgeN/BxHX29Rs39djAfaFalmQ89SE6CWyDCHzGL0yt/ycBtNOmGTW0FyGWNw==
@@ -2339,10 +2339,21 @@ cdk8s-plus-25@^2.22.44:
   optionalDependencies:
     backport "8.5.0"
 
-cdk8s@2.67.3, cdk8s@^2.67.3:
+cdk8s@^2.67.3:
   version "2.67.3"
   resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.67.3.tgz#b32e27a1cd0d86e37827abee96ffde6295f31ce3"
   integrity sha512-UgdJORDS9o+jBMGh4qa4sVlnNoJxjLiDemL0rJuilVYNh8CVAwXdFs9FK4quuxq/fCxx/WQdB5Zak+j2PjAyYA==
+  dependencies:
+    fast-json-patch "^3.1.1"
+    follow-redirects "^1.15.2"
+    yaml "2.3.2"
+  optionalDependencies:
+    backport "8.5.0"
+
+cdk8s@^2.68.4:
+  version "2.68.4"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.68.4.tgz#13e64f88a5f073785558f8f70e29c36c78737dfc"
+  integrity sha512-pkTtmwi3/hPWey6XtSbvPvQcdWfX6H+g1I/HPx5X5eyW22yGEZzYfSuv4HBHBLxOsp6949OlidLZn6EDo7D+UA==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
@@ -2381,15 +2392,6 @@ cdktf-cli@^0.19.0:
     yoga-layout-prebuilt "^1.10.0"
     zod "^1.11.17"
 
-cdktf@0.18.2:
-  version "0.18.2"
-  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.18.2.tgz#21b02a4114812b0a696e70d9f7cfc59caa2c0af9"
-  integrity sha512-ohCsfFwEjXbF4bGbzkx/YB/aq6spceAPtKBXfdF/kNjUx1hVH28lQDS5ykJbnxAAnvrUA8FWz034buun7uPrdQ==
-  dependencies:
-    archiver "5.3.1"
-    json-stable-stringify "^1.0.2"
-    semver "^7.5.3"
-
 cdktf@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.0.tgz#097a3241b95e77eeab8ae1f7a714bf45dc6ca55b"
@@ -2398,6 +2400,15 @@ cdktf@0.19.0:
     archiver "5.3.1"
     json-stable-stringify "^1.0.2"
     semver "^7.5.3"
+
+cdktf@^0.19.1:
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.19.1.tgz#1996a0069b97500e2a01df4f473963153541b784"
+  integrity sha512-scZhp2+FEgNUd+l5vaDCHABdwFApB1Lcknn2+dUw8aYwNsMoYT0tWs4AzPg22Z4jQFOIQLIXmBxifhr+RahdRg==
+  dependencies:
+    archiver "5.3.2"
+    json-stable-stringify "^1.0.2"
+    semver "^7.5.4"
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -2741,7 +2752,7 @@ console-control-strings@^1.1.0:
   resolved "https://registry.yarnpkg.com/console-control-strings/-/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
-constructs@10.3.0, constructs@^10.0.25, constructs@^10.3.0:
+constructs@^10.0.25, constructs@^10.3.0:
   version "10.3.0"
   resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.3.0.tgz#4c246fce9cf8e77711ad45944e9fbd41f1501965"
   integrity sha512-vbK8i3rIb/xwZxSpTjz3SagHn1qq9BChLEfy5Hf6fB3/2eFbrwt2n9kHwQcS0CPTRBesreeAcsJfMq2229FnbQ==
