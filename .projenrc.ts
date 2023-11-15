@@ -8,7 +8,6 @@ const project = new Cdk8sTeamJsiiProject({
   devDeps: ['@cdk8s/projen-common', 'cdktf-cli', 'cdk8s-cli', '@cdktf/provider-aws', 'fs-extra', '@types/fs-extra'],
   peerDeps: ['cdktf', 'cdk8s', 'constructs'],
   jsiiVersion: '^5',
-  workflowNodeVersion: '18.17.0',
   releaseWorkflowSetupSteps: [
     {
       uses: 'aws-actions/configure-aws-credentials@v3',
