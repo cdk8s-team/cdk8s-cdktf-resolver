@@ -79,8 +79,7 @@
     "constructs": "^10.3.0"
   },
   "resolutions": {
-    "**/downlevel-dts/**/typescript": "~5.2.2",
-    "npm": "^10.2.3"
+    "**/downlevel-dts/**/typescript": "~5.2.2"
   },
   "engines": {
     "node": ">= 16.20.0"
