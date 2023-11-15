@@ -135,11 +135,6 @@
       "type": "override"
     },
     {
-      "name": "npm",
-      "version": "^10.2.3",
-      "type": "override"
-    },
-    {
       "name": "cdk8s",
       "type": "peer"
     },

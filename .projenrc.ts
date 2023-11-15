@@ -34,8 +34,6 @@ const project = new Cdk8sTeamJsiiProject({
   npmAccess: NpmAccess.PUBLIC,
 });
 
-project.package.addPackageResolutions('npm@^10.2.3');
-
 // ignore integ tests because we will add a dedicated task
 // for them that only runs on release
 project.jest?.addIgnorePattern('/test/integ/');
