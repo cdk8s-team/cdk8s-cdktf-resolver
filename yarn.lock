@@ -2308,9 +2308,9 @@ cdk8s-plus-25@^2.22.62:
     backport "8.5.0"
 
 cdk8s@^2.68.4:
-  version "2.68.7"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.68.7.tgz#7a68e2bd581bae7673241e3ca23c456ce8912fdf"
-  integrity sha512-NrSozqZm47R7gNOHjQhM1nGKxbg6ZQD1iIgm7e6sYvsjDbpoDXPZ8axBEtVOO/uUw2oJzp3CAaIcGjJPXTyxEw==
+  version "2.68.9"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.68.9.tgz#d1c59d780f34b06a2ecd91c5e8b8ad9d54fc972b"
+  integrity sha512-pQ9nmKtW/pYMygM58ilyvrpatcxuUiW+pSJWeEB9FduRbXwkNy1Ep6xz47IBwOPgqwjNdlOYrIGQ++zbQ5Jk5g==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.15.2"
