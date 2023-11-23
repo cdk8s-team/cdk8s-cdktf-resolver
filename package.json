@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.471",
+    "@cdk8s/projen-common": "0.0.472",
     "@cdktf/provider-aws": "^17.0.11",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^27",
@@ -65,8 +65,7 @@
     "jsii-docgen": "^9.2.2",
     "jsii-pacmak": "^1.92.0",
     "jsii-rosetta": "^5",
-    "npm-check-updates": "^16",
-    "projen": "^0.77.1",
+    "projen": "^0.77.2",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.1",
