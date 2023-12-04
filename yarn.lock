@@ -4882,26 +4882,7 @@ jsii-rosetta@^1.92.0:
     workerpool "^6.5.1"
     yargs "^16.2.0"
 
-jsii-rosetta@^5:
-  version "5.2.4"
-  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.2.4.tgz#febd84695ea6ca9875ab5a441e387f7e3e8c3151"
-  integrity sha512-X8R0mNbakYYKHqpoTEH1Ncy5PLT7Rz5/8nr1xH5DjIt9gacfW+dV9eaZj/gkxly3H+ECYK4v3/tWV7KFYMIBPQ==
-  dependencies:
-    "@jsii/check-node" "1.92.0"
-    "@jsii/spec" "^1.92.0"
-    "@xmldom/xmldom" "^0.8.10"
-    chalk "^4"
-    commonmark "^0.30.0"
-    fast-glob "^3.3.2"
-    jsii "~5.2.5"
-    semver "^7.5.4"
-    semver-intersect "^1.4.0"
-    stream-json "^1.8.0"
-    typescript "~5.2.2"
-    workerpool "^6.5.1"
-    yargs "^17.7.2"
-
-jsii-rosetta@^5.1.9:
+jsii-rosetta@^5, jsii-rosetta@^5.1.9:
   version "5.2.5"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.2.5.tgz#2268dfb0be85105c9e3a68d7ddf8d7ee08843b54"
   integrity sha512-lJPJAlrVt+jxJ1RwtM3DocLik8B/74daOB8dbuZzcGHGhVBLQ2No2GYwjn9EsyLnvzO2ULeSWduEhdgc61XhwQ==
@@ -4950,10 +4931,10 @@ jsii@1.92.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii@^5:
-  version "5.2.35"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.2.35.tgz#d56a9cb8f01f709250df28b61b365c5978652538"
-  integrity sha512-idWKsPquJDpJR8rCxOVtTwUKtvHM4BA6e8SvylTF6ZVDHBxnKbD4wB7cQLeB2JPKKsW31TIG63+fND6HUw2V3w==
+jsii@^5, jsii@~5.2.5:
+  version "5.2.38"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.2.38.tgz#4548a7b88b3e2a1ef582f037c81bd20db88b5df0"
+  integrity sha512-QGt5Kd01wHrE3ASylXu1Rycsa0i4dn6jCqGDU/oxs8/K4zBDGJr0yqiJ2W3lgqIpDxn94PxZppHXSV8zJ8pJog==
   dependencies:
     "@jsii/check-node" "1.92.0"
     "@jsii/spec" "^1.92.0"
@@ -4963,13 +4944,13 @@ jsii@^5:
     fast-deep-equal "^3.1.3"
     log4js "^6.9.1"
     semver "^7.5.4"
-    semver-intersect "^1.4.0"
+    semver-intersect "^1.5.0"
     sort-json "^2.0.1"
     spdx-license-list "^6.8.0"
     typescript "~5.2"
     yargs "^17.7.2"
 
-jsii@^5.1.10, jsii@~5.2.35, jsii@~5.2.5:
+jsii@^5.1.10, jsii@~5.2.35:
   version "5.2.37"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.2.37.tgz#d1e0d74f81b492e17b87d13b524f5810ef4c8a7a"
   integrity sha512-BZc+wWlcjevfMq26J7DxpiJPUXy72Bak0e1xMkRVWD6y+vuq0IrKmhlpPJzSDJjCw3xR5JgOmaRHinm57v0TzA==
