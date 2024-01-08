@@ -1271,9 +1271,9 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^20.4.2", "@types/node@^20.9.0":
-  version "20.10.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.6.tgz#a3ec84c22965802bf763da55b2394424f22bfbb5"
-  integrity sha512-Vac8H+NlRNNlAmDfGUP7b5h/KA+AtWIzuXy0E6OyP8f1tCLYAtPvKRRDJjAPqhpCb0t6U2j7/xqAuLEebW2kiw==
+  version "20.10.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.10.7.tgz#40fe8faf25418a75de9fe68a8775546732a3a901"
+  integrity sha512-fRbIKb8C/Y2lXxB5eVMj4IU7xpdox0Lh8bUPEdtLysaylsml1hOOx1+STloRs/B9nf7C6kPRmmg/V7aQW7usNg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1285,9 +1285,9 @@
     undici-types "~5.26.4"
 
 "@types/node@^16":
-  version "16.18.69"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.69.tgz#84853c5562baeabc6e864e36ea106f8c09495b24"
-  integrity sha512-AfDKv5fWd9XStaEuqFa6PYcM8FgTqxVMsP4BPk60emeB9YX+pp2P0zZ8nU1BQg8hyPGFrMt7MGMRMis8IrcPyg==
+  version "16.18.70"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.18.70.tgz#d4c819be1e9f8b69a794d6f2fd929d9ff76f6d4b"
+  integrity sha512-8eIk20G5VVVQNZNouHjLA2b8utE2NvGybLjMaF4lyhA9uhGwnmXF8o+icdXKGSQSNANJewXva/sFUoZLwAaYAg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.4"
@@ -1985,9 +1985,9 @@ camelcase@^6.2.0, camelcase@^6.3.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001565:
-  version "1.0.30001574"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001574.tgz#fb4f1359c77f6af942510493672e1ec7ec80230c"
-  integrity sha512-BtYEK4r/iHt/txm81KBudCUcTy7t+s9emrIaHqjYurQ10x71zJ5VQ9x1dYPcz/b+pKSp4y/v1xSI67A+LzpNyg==
+  version "1.0.30001576"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001576.tgz#893be772cf8ee6056d6c1e2d07df365b9ec0a5c4"
+  integrity sha512-ff5BdakGe2P3SQsMsiqmt1Lc8221NR1VzHj5jXN5vBny9A6fpze94HiVV/n7XRosOlsShJcvMv5mdnpjOGCEgg==
 
 case@^1.6.3:
   version "1.6.3"
@@ -4883,10 +4883,29 @@ jsii-rosetta@^1.93.0:
     workerpool "^6.5.1"
     yargs "^16.2.0"
 
-jsii-rosetta@^5, jsii-rosetta@^5.1.9:
+jsii-rosetta@^5:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.3.2.tgz#2683f16cfd035277dc9843e9087556827938ce56"
   integrity sha512-pY5wm72XcT9RdTWh/UpIVnyLScz381GtmlW4ey9ojJdHUoxvtni0vdGdSl+ZaojqEQR7TLdUM+ocLgB8Xnujxw==
+  dependencies:
+    "@jsii/check-node" "1.93.0"
+    "@jsii/spec" "^1.93.0"
+    "@xmldom/xmldom" "^0.8.10"
+    chalk "^4"
+    commonmark "^0.30.0"
+    fast-glob "^3.3.2"
+    jsii "~5.3.0"
+    semver "^7.5.4"
+    semver-intersect "^1.5.0"
+    stream-json "^1.8.0"
+    typescript "~5.3"
+    workerpool "^6.5.1"
+    yargs "^17.7.2"
+
+jsii-rosetta@^5.1.9:
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.3.3.tgz#581f43a507a7e025abf19d57f37489072970b659"
+  integrity sha512-p00zNkx1yicyAyWGWnpIXutryqx3Q1Hko3yPWrhOsSEqy/WiKGAKme87S/EZVnpz0TAse/mX4OymlBCqDXagJw==
   dependencies:
     "@jsii/check-node" "1.93.0"
     "@jsii/spec" "^1.93.0"
@@ -4932,10 +4951,29 @@ jsii@1.93.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii@^5, jsii@^5.1.10, jsii@~5.3.0:
+jsii@^5:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.3.2.tgz#3dc65c39dea3fb4e2f77fd7b48be5d3fef585962"
   integrity sha512-wwwp47+6orlMXpny4dlTOP6776cBo2WFDgxZyGjQaV4VWNydsJiTcinuJzCj1XVZicBhpAnkuBMr89+2aT8Dcg==
+  dependencies:
+    "@jsii/check-node" "1.93.0"
+    "@jsii/spec" "^1.93.0"
+    case "^1.6.3"
+    chalk "^4"
+    downlevel-dts "^0.11.0"
+    fast-deep-equal "^3.1.3"
+    log4js "^6.9.1"
+    semver "^7.5.4"
+    semver-intersect "^1.5.0"
+    sort-json "^2.0.1"
+    spdx-license-list "^6.8.0"
+    typescript "~5.3"
+    yargs "^17.7.2"
+
+jsii@^5.1.10, jsii@~5.3.0:
+  version "5.3.3"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.3.3.tgz#49e12615543c9e0a6cbd2ed82dae347eb993c10c"
+  integrity sha512-M+kAUKJiLXXJXKYmBB0Q2n1aGoeNHyzMCLAx7402JqXSLxH4JGh6kOf4EH3U3LmQKzv2kxOHMRCg3Ssh82KtrQ==
   dependencies:
     "@jsii/check-node" "1.93.0"
     "@jsii/spec" "^1.93.0"
