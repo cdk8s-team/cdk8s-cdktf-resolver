@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.479",
+    "@cdk8s/projen-common": "0.0.481",
     "@cdktf/provider-aws": "^17.0.11",
     "@types/fs-extra": "^11.0.4",
     "@types/jest": "^27",
@@ -65,7 +65,7 @@
     "jsii-docgen": "^9.2.2",
     "jsii-pacmak": "^1.94.0",
     "jsii-rosetta": "^5",
-    "projen": "^0.77.6",
+    "projen": "^0.78.13",
     "standard-version": "^9",
     "ts-jest": "^27",
     "ts-node": "^10.9.2",
@@ -123,11 +123,13 @@
         }
       ]
     ],
-    "preset": "ts-jest",
-    "globals": {
-      "ts-jest": {
-        "tsconfig": "tsconfig.dev.json"
-      }
+    "transform": {
+      "^.+\\.[t]sx?$": [
+        "ts-jest",
+        {
+          "tsconfig": "tsconfig.dev.json"
+        }
+      ]
     }
   },
   "types": "lib/index.d.ts",
