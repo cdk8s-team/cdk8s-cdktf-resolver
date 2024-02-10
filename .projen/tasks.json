@@ -372,7 +372,7 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,cdk8s-cli,cdktf-cli,constructs,eslint-import-resolver-typescript,eslint-plugin-import,eslint,fs-extra,jest,jest-junit,jsii-diff,standard-version,ts-jest,ts-node"
+          "exec": "npx npm-check-updates@16 --upgrade --target=minor --peer --dep=dev --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,cdk8s-cli,cdktf-cli,eslint-import-resolver-typescript,eslint-plugin-import,fs-extra,jest,jsii-diff,ts-jest,ts-node"
         },
         {
           "exec": "yarn install --check-files"
