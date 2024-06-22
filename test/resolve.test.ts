@@ -34,13 +34,13 @@ test('can resolve direct output value', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.bucket}",
       },
     }
@@ -76,13 +76,13 @@ test('can resolve indirect output value', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.bucket}",
       },
     }
@@ -117,13 +117,13 @@ test('can resolve numbers', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.attr}",
       },
     }
@@ -158,13 +158,13 @@ test('can resolve booleans', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.attr}",
       },
     }
@@ -199,13 +199,13 @@ test('can resolve token maps', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.attr}",
       },
     }
@@ -276,13 +276,13 @@ test('can resolve token arrays', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.attr}",
       },
     }
@@ -353,13 +353,13 @@ test('can resolve expressions', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${upper(aws_s3_bucket.Bucket.bucket)}",
       },
     }
@@ -394,13 +394,13 @@ test('can resolve nested output value', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket.bucket}",
       },
     }
@@ -435,13 +435,13 @@ test('can resolve resource', () => {
   mockOutputs(resolver, awsApp);
 
   expect(obj.toJson()).toMatchInlineSnapshot(`
-    Object {
+    {
       "apiVersion": "v1",
       "kind": "Struct",
-      "metadata": Object {
+      "metadata": {
         "name": "chart-apiobject-c830d7bd",
       },
-      "spec": Object {
+      "spec": {
         "prop1": "\${aws_s3_bucket.Bucket}",
       },
     }
