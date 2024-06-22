@@ -2163,7 +2163,7 @@ cdktf-cli@^0.20.7:
     yoga-layout-prebuilt "1.10.0"
     zod "3.22.4"
 
-cdktf@^0.20.0, cdktf@0.20.7:
+cdktf@^0.20.0, cdktf@^0.20.7, cdktf@0.20.7:
   version "0.20.7"
   resolved "https://registry.npmjs.org/cdktf/-/cdktf-0.20.7.tgz"
   integrity sha512-7za8QQYM1G0/6JUCYY+5smwNfNfbiZVPCMD7SeX2rTYmOLaGEkHZtMvuUTEKSqsE56fKudnfVd2J2edz2CETFg==
