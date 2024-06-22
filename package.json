@@ -51,7 +51,7 @@
     "@typescript-eslint/parser": "^7",
     "cdk8s": "^2.68.4",
     "cdk8s-cli": "^2.198.175",
-    "cdktf": "^0.20.0",
+    "cdktf": "^0.20.8",
     "cdktf-cli": "^0.20.8",
     "constructs": "^10.3.0",
     "eslint": "^8",
@@ -73,7 +73,7 @@
   },
   "peerDependencies": {
     "cdk8s": "^2.68.11",
-    "cdktf": "^0.20.0",
+    "cdktf": "^0.20.8",
     "constructs": "^10.3.0"
   },
   "resolutions": {

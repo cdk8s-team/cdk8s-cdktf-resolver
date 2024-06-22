@@ -2125,9 +2125,9 @@ cdktf-cli@^0.20.8:
     yoga-layout-prebuilt "1.10.0"
     zod "3.23.8"
 
-cdktf@0.20.8, cdktf@^0.20.0:
+cdktf@0.20.8, cdktf@^0.20.8:
   version "0.20.8"
-  resolved "https://registry.npmjs.org/cdktf/-/cdktf-0.20.8.tgz"
+  resolved "https://registry.yarnpkg.com/cdktf/-/cdktf-0.20.8.tgz#fab16ab662c22717bc0ea155429c7d22b043d58b"
   integrity sha512-O4O5h0b1E6scc/tqq9EUIQGDbPmdrCQpdkPdbDtUHHzhZGtmFpIMc5MgP1SgB+EzAutnG2oUDefjCqWMnhDe9A==
   dependencies:
     archiver "6.0.2"
