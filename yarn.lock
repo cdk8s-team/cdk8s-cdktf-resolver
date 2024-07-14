@@ -2052,19 +2052,19 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001640:
-  version "1.0.30001641"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001641.tgz#3572862cd18befae3f637f2a1101cc033c6782ac"
-  integrity sha512-Phv5thgl67bHYo1TtMY/MurjkHhV4EDaCosezRXgZ8jzA/Ub+wjxAvbGvjoFENStinwi5kCyOYV3mi5tOGykwA==
+  version "1.0.30001642"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001642.tgz#6aa6610eb24067c246d30c57f055a9d0a7f8d05f"
+  integrity sha512-3XQ0DoRgLijXJErLSl+bLnJ+Et4KqV1PY6JJBGAFlsNsz31zeAIncyeZfLCabHK/jtSh+671RM9YMldxjUPZtA==
 
 case@^1.6.3:
   version "1.6.3"
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-cli@^2.198.171:
-  version "2.198.171"
-  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.198.171.tgz#8396b949174e5d6cda2c3731cc738ba31af4dcb1"
-  integrity sha512-LYB/7CLY/9xNaA0BayWh5hyZBBnVnHXRYBRjnjQQX88t2dQBtt1NoE3ydJ5DARkGyv5uD80xH6SdvAvTDrDDHw==
+cdk8s-cli@^2.198.172:
+  version "2.198.172"
+  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.198.172.tgz#16bdb2a5cd6ac39e72458fb22947b26c701b5966"
+  integrity sha512-cQG5cu+Zt9ZVS+LgUvrlsOeWBipZVs/D7RBOvjX04YK5x3z2OGdkjLc5Gq7yfQAVX1ZmrVr7YAseippExUXEaA==
   dependencies:
     "@types/node" "^16"
     ajv "^8.17.1"
@@ -2076,7 +2076,7 @@ cdk8s-cli@^2.198.171:
     fs-extra "^8"
     jsii-pacmak "^1.101.0"
     jsii-rosetta "^5.4.25"
-    jsii-srcmak "^0.1.1181"
+    jsii-srcmak "^0.1.1182"
     json2jsii "^0.4.4"
     semver "^7.6.2"
     sscaff "^1.2.274"
@@ -5098,10 +5098,10 @@ jsii-rosetta@^5, jsii-rosetta@^5.4.25:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-srcmak@^0.1.1181:
-  version "0.1.1181"
-  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1181.tgz#6ed4beccd1aa9967469f654012882bce384744e0"
-  integrity sha512-EWRsOmvyE1Qh0whDW/b4cglgf4Xg6bJPmq25iyH8XnZ+UHHDIV/JtYMCuZ0iDFdxDWVU4i++Wb2CiaVovlJAow==
+jsii-srcmak@^0.1.1182:
+  version "0.1.1182"
+  resolved "https://registry.yarnpkg.com/jsii-srcmak/-/jsii-srcmak-0.1.1182.tgz#14c5b779c8e90a17fc139ff66c23330ac73feab8"
+  integrity sha512-EUhUxaNXV3LXgdgJfstFwZV3vFGHbotgaVyNgV55KfX36S2VaiI+r1yUE+7TADkpRaafza5Jc8OF6gDxfkzVVw==
   dependencies:
     fs-extra "^9.1.0"
     jsii "~5.4.26"
