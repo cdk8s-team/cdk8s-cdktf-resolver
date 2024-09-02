@@ -4883,26 +4883,7 @@ jsii-rosetta@5.4.14:
     workerpool "^6.5.1"
     yargs "^17.7.2"
 
-jsii-rosetta@^5:
-  version "5.5.3"
-  resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.5.3.tgz#1aea3d2d47f8c055fb38ff0ab206250e47b24685"
-  integrity sha512-8WfBc3tMae/fY3n9jofApFA7UUT/y0XQd/ybSbqX+URsLQhOiain+uaJPkvA1dbDAwW2Gc7PaHxyKBD6TstJjQ==
-  dependencies:
-    "@jsii/check-node" "1.103.0"
-    "@jsii/spec" "^1.103.0"
-    "@xmldom/xmldom" "^0.8.10"
-    chalk "^4"
-    commonmark "^0.31.1"
-    fast-glob "^3.3.2"
-    jsii "~5.5.0"
-    semver "^7.6.3"
-    semver-intersect "^1.5.0"
-    stream-json "^1.8.0"
-    typescript "~5.5"
-    workerpool "^6.5.1"
-    yargs "^17.7.2"
-
-jsii-rosetta@^5.5.3, jsii-rosetta@^5.5.4:
+jsii-rosetta@^5, jsii-rosetta@^5.5.3, jsii-rosetta@^5.5.4:
   version "5.5.4"
   resolved "https://registry.yarnpkg.com/jsii-rosetta/-/jsii-rosetta-5.5.4.tgz#8825f62fb3a38860d7834740fe2d4d9cc5251268"
   integrity sha512-hTIjmP9KmOptBm881r1aFq7CLi4agNvy4GOgbupF/K4pAFBH1hTJ4xL9NBxQxhEuWi3rRFQA72Z6aYz1AHcuIg==
@@ -4952,13 +4933,13 @@ jsii@5.4.12:
     typescript "~5.4"
     yargs "^17.7.2"
 
-jsii@^5:
-  version "5.5.1"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.5.1.tgz#7b177948435b10be2a98919233e485b1f92fa65f"
-  integrity sha512-YEkXUyCLU97geGu0pv5l2gP1P1S0ZMvanYI4FKvmsSHCtNXV//jIBI0Q80yjdUi7k5XQL1ECs+m4+IZHAEb92w==
+jsii@^5, jsii@~5.5.0, jsii@~5.5.1:
+  version "5.5.2"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.5.2.tgz#b6411b742ace39b7d028153bdbdd3c64c02c88b2"
+  integrity sha512-pXvOPzn0pK4pvNF+vl9OjeI+49YDsKnx/CRgu5SoTYNh3HFsWhNg8OukEgW+vyKw6l1ohZQLZfikKnIehe4WZQ==
   dependencies:
-    "@jsii/check-node" "1.102.0"
-    "@jsii/spec" "^1.102.0"
+    "@jsii/check-node" "1.103.1"
+    "@jsii/spec" "^1.103.1"
     case "^1.6.3"
     chalk "^4"
     downlevel-dts "^0.11.0"
@@ -4988,25 +4969,6 @@ jsii@~5.4.0:
     sort-json "^2.0.1"
     spdx-license-list "^6.9.0"
     typescript "~5.4"
-    yargs "^17.7.2"
-
-jsii@~5.5.0, jsii@~5.5.1:
-  version "5.5.2"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.5.2.tgz#b6411b742ace39b7d028153bdbdd3c64c02c88b2"
-  integrity sha512-pXvOPzn0pK4pvNF+vl9OjeI+49YDsKnx/CRgu5SoTYNh3HFsWhNg8OukEgW+vyKw6l1ohZQLZfikKnIehe4WZQ==
-  dependencies:
-    "@jsii/check-node" "1.103.1"
-    "@jsii/spec" "^1.103.1"
-    case "^1.6.3"
-    chalk "^4"
-    downlevel-dts "^0.11.0"
-    fast-deep-equal "^3.1.3"
-    log4js "^6.9.1"
-    semver "^7.6.3"
-    semver-intersect "^1.5.0"
-    sort-json "^2.0.1"
-    spdx-license-list "^6.9.0"
-    typescript "~5.5"
     yargs "^17.7.2"
 
 json-buffer@3.0.1:
