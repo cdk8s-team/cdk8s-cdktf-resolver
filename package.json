@@ -52,7 +52,7 @@
     "cdk8s": "^2.68.91",
     "cdk8s-cli": "^2.198.226",
     "cdktf": "^0.19.1",
-    "cdktf-cli": "^0.20.8",
+    "cdktf-cli": "^0.20.9",
     "commit-and-tag-version": "^12",
     "constructs": "^10.3.0",
     "eslint": "^8",
