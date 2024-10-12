@@ -4894,7 +4894,7 @@ jsii-pacmak@^1.104.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-reflect@^1.102.0, jsii-reflect@^1.104.0:
+jsii-reflect@^1.102.0, jsii-reflect@^1.103.1, jsii-reflect@^1.104.0:
   version "1.104.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.104.0.tgz#5ac03b8e895c4b248743969252fab699ef2df5a5"
   integrity sha512-tBdJvLPdfrlAI7ijKmuUv48Nkk0aC26VC/wtNjVqtJmpKsDOOG1JXKiIny690FnifhgpdoHnrVE12asSpFdPfA==
@@ -4904,18 +4904,6 @@ jsii-reflect@^1.102.0, jsii-reflect@^1.104.0:
     chalk "^4"
     fs-extra "^10.1.0"
     oo-ascii-tree "^1.104.0"
-    yargs "^16.2.0"
-
-jsii-reflect@^1.103.1:
-  version "1.103.1"
-  resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.103.1.tgz#486ea9077a20ac244d0127c08388c2bf33de4f03"
-  integrity sha512-kFm09KL9dlxyxesf7mtm12+4vVaRin5YI4Eca2OOa0X28HNVpr62/n21T3BuAAhFaI0nkiUoJuBWtdOz475BSQ==
-  dependencies:
-    "@jsii/check-node" "1.103.1"
-    "@jsii/spec" "^1.103.1"
-    chalk "^4"
-    fs-extra "^10.1.0"
-    oo-ascii-tree "^1.103.1"
     yargs "^16.2.0"
 
 jsii-rosetta@5.4.30:
@@ -5667,7 +5655,7 @@ onetime@^5.1.0, onetime@^5.1.2:
   dependencies:
     mimic-fn "^2.1.0"
 
-oo-ascii-tree@^1.103.1, oo-ascii-tree@^1.104.0:
+oo-ascii-tree@^1.104.0:
   version "1.104.0"
   resolved "https://registry.yarnpkg.com/oo-ascii-tree/-/oo-ascii-tree-1.104.0.tgz#f17857f84f25b0b9d0879bbea2f04caf15a72384"
   integrity sha512-2cScXtwxt5WVIi3+vdkbKoHSeRepRcibnFhdV2ojGxVvj1KU0m0EHfBCsal6XEg1vBkMgTIxnxVd+E/l/Fam3w==
