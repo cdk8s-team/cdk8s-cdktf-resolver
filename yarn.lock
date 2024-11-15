@@ -4829,24 +4829,6 @@ jsii-pacmak@^1.103.1, jsii-pacmak@^1.105.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-pacmak@^1.104.0:
-  version "1.104.0"
-  resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.104.0.tgz#994d52e0e063f78f23c8502e826606e0552c1fa6"
-  integrity sha512-KxdYOzpBSnixZ5VjKsWvVIaRAwW4L5JJS3GE0yn5pj6Antx2sjaMvy6XsbjI1MPiOe/W8xNlRDW/XgNE+Bzt6g==
-  dependencies:
-    "@jsii/check-node" "1.104.0"
-    "@jsii/spec" "^1.104.0"
-    clone "^2.1.2"
-    codemaker "^1.104.0"
-    commonmark "^0.31.1"
-    escape-string-regexp "^4.0.0"
-    fs-extra "^10.1.0"
-    jsii-reflect "^1.104.0"
-    semver "^7.6.3"
-    spdx-license-list "^6.9.0"
-    xmlbuilder "^15.1.1"
-    yargs "^16.2.0"
-
 jsii-reflect@^1.102.0, jsii-reflect@^1.104.0, jsii-reflect@^1.105.0:
   version "1.105.0"
   resolved "https://registry.yarnpkg.com/jsii-reflect/-/jsii-reflect-1.105.0.tgz#0bead638caccf21444eb6b9c60f53b6fa7f2d513"
