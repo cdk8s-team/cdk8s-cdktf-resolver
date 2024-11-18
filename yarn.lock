@@ -1934,10 +1934,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-cli@^2.198.266:
-  version "2.198.266"
-  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.198.266.tgz#097c419c36b6e69aa10d2bc3cff666d57124e721"
-  integrity sha512-8TAgNcf2k1YaWX51N5HxXs8Df/agQytZdfR9XbxnZiLUHwGi7qpniRPlZgBbs9Al+9IDw3wIWHxG5h9rsa+zzw==
+cdk8s-cli@^2.198.267:
+  version "2.198.267"
+  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.198.267.tgz#ade921e1075b150611720301b72b7ae1dd3d4fdf"
+  integrity sha512-N/KT3HSm+RSnXhHQ6Ha0mz5XVDNGdKWEXO8j01cevwrF/IdZBLSmpyiGtu4Qh8k3qcTXIQVX2Lde2tIM/Q5ShA==
   dependencies:
     "@types/node" "^16"
     ajv "^8.17.1"
@@ -4928,12 +4928,12 @@ jsii@^5, jsii@~5.6.0:
     yargs "^17.7.2"
 
 jsii@~5.4.0:
-  version "5.4.42"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.4.42.tgz#7b920afa4e522778b0faf8eb652ee9bbaca7d945"
-  integrity sha512-UbZdaFxoo7f107d6ywCW5XPrDVjdsR4QjjuqTjpkyHC95u3dKfoorEJqvGjrJBWrzvqPOIoNCV0B4NGME7jELw==
+  version "5.4.43"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.4.43.tgz#96cfc5e4595c01304928d0b066c201fd9d08e340"
+  integrity sha512-F6YqKnwp411Ay83ylAWhqWIxOQcPWFWifWH+YrEb7eUPAplqPxGyY4ox2p47N+KOF2+OR1FF4eiOll3brXxr8w==
   dependencies:
-    "@jsii/check-node" "1.104.0"
-    "@jsii/spec" "^1.104.0"
+    "@jsii/check-node" "1.105.0"
+    "@jsii/spec" "^1.105.0"
     case "^1.6.3"
     chalk "^4"
     downlevel-dts "^0.11.0"
