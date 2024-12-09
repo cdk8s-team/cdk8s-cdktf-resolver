@@ -78,7 +78,7 @@
     "constructs": "^10.3.0"
   },
   "resolutions": {
-    "**/downlevel-dts/**/typescript": "~5.2.2"
+    "cross-spawn": "^7.0.6"
   },
   "engines": {
     "node": ">= 16.20.0"
