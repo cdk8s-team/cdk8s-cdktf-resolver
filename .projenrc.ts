@@ -50,6 +50,10 @@ releaseTask.exec(`npx projen ${integTask.name}`);
 const releaseWorkflow = project.tryFindObjectFile('.github/workflows/release.yml');
 releaseWorkflow!.addOverride('jobs.release.permissions.id-token', 'write');
 
+project.package.addField("resolutions", {
+  "cross-spawn": "^7.0.6"
+});
+
 project.synth();
 
 function jest(args: string) {
