@@ -1112,9 +1112,9 @@
     "@sinonjs/commons" "^1.7.0"
 
 "@stylistic/eslint-plugin@^2":
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/@stylistic/eslint-plugin/-/eslint-plugin-2.12.1.tgz#e341beb4e4315084d8be20bceeeda7d8a46f079f"
-  integrity sha512-fubZKIHSPuo07FgRTn6S4Nl0uXPRPYVNpyZzIDGfp7Fny6JjNus6kReLD7NI380JXi4HtUTSOZ34LBuNPO1XLQ==
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/@stylistic/eslint-plugin/-/eslint-plugin-2.13.0.tgz#53bf175dac8c1ec055b370a6ff77d491cae9a70d"
+  integrity sha512-RnO1SaiCFHn666wNz2QfZEFxvmiNRqhzaMXHXxXXKt+MEP7aajlPxUSMIQpKAaJfverpovEYqjBOXDq6dDcaOQ==
   dependencies:
     "@typescript-eslint/utils" "^8.13.0"
     eslint-visitor-keys "^4.2.0"
@@ -5038,9 +5038,9 @@ jsii@^5, jsii@~5.7.0:
     yargs "^17.7.2"
 
 jsii@~5.4.0:
-  version "5.4.47"
-  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.4.47.tgz#e6348e0c1b265d7ca7d852287840ebb0f77d8f7a"
-  integrity sha512-CKRmygq+crvzLPijY71MFzTacbBd4OKqeaj44CtODQBvWpP6k4KH6IWkJQkroZSGXpERfwLDyTeed950p3cZkg==
+  version "5.4.48"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.4.48.tgz#19a02e6e20af36270c122fa0c7d98b6111fff683"
+  integrity sha512-wCiGaVs/pKtrTXIg9ymvEztgMYY3X/juXGuPu9Q4UxGVk9eHN3BvhAaOJ46b0qs3VsOkCP2aD8/b/QNccDufxQ==
   dependencies:
     "@jsii/check-node" "1.106.0"
     "@jsii/spec" "^1.106.0"
@@ -6945,9 +6945,9 @@ tapable@^2.2.0:
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
 tar-fs@^2.0.0:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/tar-fs/-/tar-fs-2.1.1.tgz#489a15ab85f1f0befabb370b7de4f9eb5cbe8784"
-  integrity sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/tar-fs/-/tar-fs-2.1.2.tgz#425f154f3404cb16cb8ff6e671d45ab2ed9596c5"
+  integrity sha512-EsaAXwxmx8UB7FRKqeozqEPop69DXcmYwTQwXvyAPF352HJsPdkVhvTaDPYqfNgruveJIJy3TA2l+2zj8LJIJA==
   dependencies:
     chownr "^1.1.1"
     mkdirp-classic "^0.5.2"
@@ -7253,9 +7253,9 @@ typescript@^5.7.3, typescript@~5.7:
   integrity sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==
 
 typescript@next:
-  version "5.8.0-dev.20250112"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.0-dev.20250112.tgz#7cfbfdd272fc9c2e61951ccf2e56bee901d84e49"
-  integrity sha512-FnjhMHSSzZBHvmxnaX4ynpflLl6pKWDMCJmt9AgSr88DiM9VMXSpATL4E2S5ZDoTcCUXusTios8gNzpTkIL4Hg==
+  version "5.8.0-dev.20250113"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.0-dev.20250113.tgz#c85bdabe7739f8d09d5fa95edaefe7500daff8c0"
+  integrity sha512-P0/9dr0Rwfs+XMXz2OyX9rVUu84x0qKUlTMDytq5GentLY1ebkyOHQSxvVeU/7L3hzrLFvdM4tVnuQJme1Webw==
 
 typescript@~5.4:
   version "5.4.5"
