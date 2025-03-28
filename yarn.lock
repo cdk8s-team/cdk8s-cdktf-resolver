@@ -436,10 +436,10 @@
     nan "^2.14.2"
     prebuild-install "^7.1.1"
 
-"@cdktf/provider-aws@^19.58.0":
-  version "19.58.0"
-  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.58.0.tgz#ca277cfa7b32f861cabdcb4e038e5240a2052412"
-  integrity sha512-2bBt5++4u8qhrjOLVrgbVLQWe8jvP1gpTHqsZiobW6K56JigDAbPuL/N4/twIzjKT3UwVFdUkvWvRIByIjiNKg==
+"@cdktf/provider-aws@^19.59.0":
+  version "19.59.0"
+  resolved "https://registry.yarnpkg.com/@cdktf/provider-aws/-/provider-aws-19.59.0.tgz#c32003ffa95b4eeab32341aca1c718d9814ebd15"
+  integrity sha512-YoeBWK2Vrpx0nApPpYx9KBQK0hjoVxDA2A0wEWWn3tXnG1FMHwEtmc7kguImT6rSugwEgXD5kJFsexHTEXRGTA==
 
 "@cdktf/provider-generator@0.20.11":
   version "0.20.11"
@@ -2146,10 +2146,10 @@ case@^1.6.3:
   resolved "https://registry.yarnpkg.com/case/-/case-1.6.3.tgz#0a4386e3e9825351ca2e6216c60467ff5f1ea1c9"
   integrity sha512-mzDSXIPaFwVDvZAHqZ9VlbyF4yyXRuX6IvB06WvPYkqJVO24kX1PPhv9bfpKNFZyxYFmmgo03HUiD8iklmJYRQ==
 
-cdk8s-cli@^2.200.30:
-  version "2.200.30"
-  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.200.30.tgz#5ddd5166a369319e11fdcde768b740eab7949fb7"
-  integrity sha512-IDbkh3gitLC/62pzznC5r5St2BqWfXryEk0cQrRpBeYLYlQlPTSgUyRfDnJNPtw+6YAMlnq3Yixz237Y7oCrPg==
+cdk8s-cli@^2.200.31:
+  version "2.200.31"
+  resolved "https://registry.yarnpkg.com/cdk8s-cli/-/cdk8s-cli-2.200.31.tgz#d3cb4dee4e49fd543b3992766ead4b81aa61e37b"
+  integrity sha512-FSFccsXzAYvljqbC58dls5HF4ABRWAtRlGdN/TjnZO0iPu5MLObOD6IouimzUxyPkCub69e87FW0FLRd8nXzSw==
   dependencies:
     "@types/node" "^16"
     ajv "^8.17.1"
@@ -3008,9 +3008,9 @@ ejs@^3.1.10:
     jake "^10.8.5"
 
 electron-to-chromium@^1.5.73:
-  version "1.5.126"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.126.tgz#51c3be94c25710f2f49ffddbab5aca8983e11e2f"
-  integrity sha512-AtH1uLcTC72LA4vfYcEJJkrMk/MY/X0ub8Hv7QGAePW2JkeUFHEL/QfS4J77R6M87Sss8O0OcqReSaN1bpyA+Q==
+  version "1.5.128"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.128.tgz#8ea537b369c32527b3cc47df7973bffe5d3c2980"
+  integrity sha512-bo1A4HH/NS522Ws0QNFIzyPcyUUNV/yyy70Ho1xqfGYzPUme2F/xr4tlEOuM6/A538U1vDA7a4XfCd1CKRegKQ==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -5691,9 +5691,9 @@ npm-run-path@^4.0.1:
     path-key "^3.0.0"
 
 nwsapi@^2.2.12:
-  version "2.2.19"
-  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.19.tgz#586660f7c24c34691907002309a8dc28064c9c0b"
-  integrity sha512-94bcyI3RsqiZufXjkr3ltkI86iEl+I7uiHVDtcq9wJUTwYQJ5odHDeSzkkrRzi80jJ8MaeZgqKjH1bAWAFw9bA==
+  version "2.2.20"
+  resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.20.tgz#22e53253c61e7b0e7e93cef42c891154bcca11ef"
+  integrity sha512-/ieB+mDe4MrrKMT8z+mQL8klXydZWGR5Dowt4RAGKbJ3kIGEx3X4ljUo+6V73IXtUPWgfOlU5B9MlGxFO5T+cA==
 
 object-assign@^4.1.1:
   version "4.1.1"
@@ -6021,9 +6021,9 @@ pify@^3.0.0:
   integrity sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==
 
 pirates@^4.0.4:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.6.tgz#3018ae32ecfcff6c29ba2267cbf21166ac1f36b9"
-  integrity sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==
+  version "4.0.7"
+  resolved "https://registry.yarnpkg.com/pirates/-/pirates-4.0.7.tgz#643b4a18c4257c8a65104b73f3049ce9a0a15e22"
+  integrity sha512-TfySrs/5nm8fQJDcBDuUng3VOUKsd7S+zqvbOTiGXHfxX4wK31ard+hoNuvkicM/2YFzlpDgABOevKSsB4G/FA==
 
 pkg-dir@^4.2.0:
   version "4.2.0"
@@ -7259,9 +7259,9 @@ typescript@^5.8.2, typescript@~5.8:
   integrity sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==
 
 typescript@next:
-  version "5.9.0-dev.20250327"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.0-dev.20250327.tgz#54677592697eba3a791d43356fe365d08551df1e"
-  integrity sha512-mgPk1NuIM28WIA17sk771bQcwoqcS5k1Xyq0LgnWOEBjCjqDNevoVqAlU5pxW4uIgdZfpkk1b/lF577831be5Q==
+  version "5.9.0-dev.20250328"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.0-dev.20250328.tgz#8cc102d7a4462e4b2d68208c1b5b25b29bc5470c"
+  integrity sha512-m38Gb1vTDu8LugpOKL4cw7FbjQhZDYf7X2oumF4GvAs7T9O3q0Apv26ckQKuSXTQJAUUCiRfST+QHWXvssdCpQ==
 
 typescript@~5.4:
   version "5.4.5"
