@@ -42,8 +42,8 @@ k8sApp.synth();
 During cdk8s synthesis, the custom resolver will detect that `bucketName.value` is not a concrete value, 
 but rather a value of a `TerraformOutput`. It will then perform `cdktf` CLI commands in order to fetch the 
 actual value from the deployed infrastructure in your account. This means that in order 
-for `cdk8s synth` to succeed, it must be executed *after* the CDKTF resources 
-have been deployed. So your deployment workflow should (conceptually) be:
+for `cdk8s synth` to succeed, it must be executed *after* the CDKTF resources have been deployed.
+So your deployment workflow should (conceptually) be:
 
 1. `cdktf deploy`
 2. `cdk8s synth`
