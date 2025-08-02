@@ -4988,7 +4988,7 @@ jsii-docgen@^10.5.0:
     semver "^7.7.2"
     yargs "^16.2.0"
 
-jsii-pacmak@1.112.0, jsii-pacmak@^1.112.0:
+jsii-pacmak@1.112.0:
   version "1.112.0"
   resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.112.0.tgz#5002e788f584c2155e11d2b40fcff43ff8040380"
   integrity sha512-awdZ4Hb9pc8cKp2RVhJntoppgo5KnqP8f9YCmoHPPpPCS1hB3joxpVbNS6t2PYdGt1R+j7EcO7TJdah95cxE3w==
@@ -5006,7 +5006,7 @@ jsii-pacmak@1.112.0, jsii-pacmak@^1.112.0:
     xmlbuilder "^15.1.1"
     yargs "^16.2.0"
 
-jsii-pacmak@^1.103.1, jsii-pacmak@^1.113.0:
+jsii-pacmak@^1.103.1, jsii-pacmak@^1.112.0, jsii-pacmak@^1.113.0:
   version "1.113.0"
   resolved "https://registry.yarnpkg.com/jsii-pacmak/-/jsii-pacmak-1.113.0.tgz#98a70008546a63e73e68a0a2deabbc8b5c4b6aa4"
   integrity sha512-DeXAWq0v7khODfWxdYXLLmaXP+sC6Lf3Y9/vCrx6/yHoDRw1tnJs07VXjU3e3Gjv1nQxCdzWwnns304o9AjZKQ==
@@ -7290,9 +7290,9 @@ typescript@^5.9.2:
   integrity sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==
 
 typescript@next:
-  version "6.0.0-dev.20250801"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20250801.tgz#b8b86db8b953402112cb8f1ae33b82f8e1d808f5"
-  integrity sha512-b/X5+OCIRwL/sCMYpynN/Lkwx3H8Jnt+ttDIZo5bKWpYK1TTeh76tXoKsrUSex2dn8Sd8qqUf7OHifvdGmeKhg==
+  version "6.0.0-dev.20250802"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.0-dev.20250802.tgz#5953e613a5dad182edb404cc1a6886d73584a5a8"
+  integrity sha512-+SuAEEhVQ8dHijHWWCwUnDaaWS8t9JmUzKmAcGzKi9Iojwrq8ZCsP+4zwe7ZFfkeKjoc+HrRMH3soKXoMt/pYA==
 
 typescript@~5.5:
   version "5.5.4"
