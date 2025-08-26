@@ -3465,9 +3465,9 @@ fast-levenshtein@^2.0.6:
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
 fast-uri@^3.0.1:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.0.6.tgz#88f130b77cfaea2378d56bf970dea21257a68748"
-  integrity sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.1.0.tgz#66eecff6c764c0df9b762e62ca7edcfb53b4edfa"
+  integrity sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==
 
 fastq@^1.6.0:
   version "1.19.1"
@@ -4960,9 +4960,9 @@ jsii-diff@^1.113.0:
     yargs "^16.2.0"
 
 jsii-docgen@^10.5.0:
-  version "10.8.1"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-10.8.1.tgz#b6fbfa5d05aecb3d569b78dc0c519dcdb63781cb"
-  integrity sha512-D85axeeF00n0rcEz8nZ7UXC7AVQ2K9R3OHd7s0UOvh659xcYam38+JY4jXXEla0PIc4sQZwz3NKQVqTFgpX6ZQ==
+  version "10.8.2"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-10.8.2.tgz#806d1ebfb106c8af70f287921f31d0763faabec8"
+  integrity sha512-oXpYGclsqNuAwL7ry20I/u/4y8NdjD7HBZoUYvrFd5d97mtyZCrhDLDMtr+QzaHBPKKlAPchhU7/3/D0Pb0UfA==
   dependencies:
     "@jsii/spec" "^1.113.0"
     case "^1.6.3"
