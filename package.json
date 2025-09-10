@@ -51,7 +51,7 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "cdk8s": "^2.68.91",
-    "cdk8s-cli": "^2.201.20",
+    "cdk8s-cli": "^2.201.21",
     "cdktf": "^0.20.8",
     "cdktf-cli": "^0.21.0",
     "commit-and-tag-version": "^12",
