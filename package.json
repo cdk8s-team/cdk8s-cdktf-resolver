@@ -70,7 +70,7 @@
     "projen": "^0.96.5",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "cdk8s": "^2.68.91",
