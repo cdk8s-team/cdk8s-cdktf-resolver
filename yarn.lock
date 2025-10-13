@@ -5140,7 +5140,25 @@ jsii@5.8.9:
     typescript "~5.8"
     yargs "^17.7.2"
 
-jsii@^5, jsii@^5.8.9, jsii@~5.9.1:
+jsii@^5, jsii@~5.9.1:
+  version "5.9.8"
+  resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.9.8.tgz#f451b876cacf49ffe7a6fcd261819123de9615bd"
+  integrity sha512-aV+ikLxz6BPtcm5Px6tedfLYGn9+Kg2ObVfpEz9MxMKzptlLT1WAP0juR8H2n3krqEb7aa0j3Sahs/QoQKtDaA==
+  dependencies:
+    "@jsii/check-node" "1.115.0"
+    "@jsii/spec" "1.115.0"
+    case "^1.6.3"
+    chalk "^4"
+    fast-deep-equal "^3.1.3"
+    log4js "^6.9.1"
+    semver "^7.7.3"
+    semver-intersect "^1.5.0"
+    sort-json "^2.0.1"
+    spdx-license-list "^6.10.0"
+    typescript "~5.9"
+    yargs "^17.7.2"
+
+jsii@^5.8.9:
   version "5.9.7"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-5.9.7.tgz#26be467316e6ae2034ccd1f5f9f7559b05c731d3"
   integrity sha512-ozdEz7gF5uxlYvC+Ze8IkcpQI6svLvusqNSfhl7l5nzi1gYdPedzEQp0Vl8M4cSDxkOmgh2Bz3/K/d7HkGM2qQ==
