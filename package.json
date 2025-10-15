@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.629",
+    "@cdk8s/projen-common": "0.0.630",
     "@cdktf/provider-aws": "^19.65.1",
     "@stylistic/eslint-plugin": "^2",
     "@types/fs-extra": "^11.0.4",
