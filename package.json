@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.631",
+    "@cdk8s/projen-common": "0.0.633",
     "@cdktf/provider-aws": "^19.65.1",
     "@stylistic/eslint-plugin": "^2",
     "@types/fs-extra": "^11.0.4",
@@ -67,7 +67,7 @@
     "jsii-docgen": "^10.5.0",
     "jsii-pacmak": "^1.117.0",
     "jsii-rosetta": "^5",
-    "projen": "^0.98.3",
+    "projen": "^0.98.4",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
