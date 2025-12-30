@@ -42,7 +42,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@cdk8s/projen-common": "0.0.653",
+    "@cdk8s/projen-common": "0.0.655",
     "@cdktf/provider-aws": "^19.65.1",
     "@stylistic/eslint-plugin": "^2",
     "@types/fs-extra": "^11.0.4",
@@ -65,9 +65,9 @@
     "jsii": "^5",
     "jsii-diff": "^1.123.0",
     "jsii-docgen": "^10.5.0",
-    "jsii-pacmak": "^1.122.0",
+    "jsii-pacmak": "^1.123.0",
     "jsii-rosetta": "^5",
-    "projen": "^0.98.30",
+    "projen": "^0.98.31",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
