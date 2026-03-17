@@ -6026,10 +6026,10 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-projen@^0.99.20:
-  version "0.99.20"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.20.tgz#80fece27076b3d00b49b46e27f08539f96951b82"
-  integrity sha512-mK3s7G3JgeUdy2+7d3p3h/05AigbgKXvFpz8ud7Fj4XpZ2UTiKJQ+fDl29nAxIW0AnVQUQN6UfvqZGibWxni/g==
+projen@^0.99.21:
+  version "0.99.21"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.21.tgz#fd8a2ccce7b58b06315f6e4e483100c31d69136d"
+  integrity sha512-2GJUnNWZ9TDmkChzBcf4m1JL6h7gBV83aiCjlXQgcrlBXKqB9d+Sv+E/tLRHUz6bDIw3X2pZ+BSgwN3dd1t0HA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
