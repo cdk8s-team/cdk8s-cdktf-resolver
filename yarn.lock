@@ -6090,10 +6090,10 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-projen@^0.99.64:
-  version "0.99.64"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.64.tgz#b4a4c2ef6a03d32e29195c93cdb2f1a97a0f0c33"
-  integrity sha512-Q9bmO5jeQESkM3EpY0UoDshkQg2iK+npkSiwgMGPVkaNmM0/ic/4tuLqMQ4qs0IpwEmEj3atykrmUVWpIhayXQ==
+projen@^0.99.65:
+  version "0.99.65"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.65.tgz#a64f86797128172d051e5144d4a4599612347861"
+  integrity sha512-S3SSo0zQLhy8afUAWohhjunMRqaFlN9GfySP1OrW1PsgxfBSjYS8SFvc3RgFK3smFomauKaHlVQwvH2Ea9DkWw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -6105,7 +6105,7 @@ projen@^0.99.64:
     fast-json-patch "^3.1.1"
     ini "^2.0.0"
     parse-conflict-json "^4.0.0"
-    semver "^7.8.0"
+    semver "^7.8.1"
     shx "^0.4.0"
     xmlbuilder2 "^4.0.3"
     yaml "^2.2.2"
