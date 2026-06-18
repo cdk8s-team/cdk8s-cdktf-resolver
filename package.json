@@ -67,7 +67,7 @@
     "jsii-docgen": "^10.5.0",
     "jsii-pacmak": "^1.135.0",
     "jsii-rosetta": "^5",
-    "projen": "^0.99.74",
+    "projen": "^0.99.80",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
@@ -85,6 +85,7 @@
   },
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "stability": "stable",
   "publishConfig": {
     "access": "public"
   },
@@ -137,7 +138,6 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
   "jsii": {
     "outdir": "dist",
     "targets": {
