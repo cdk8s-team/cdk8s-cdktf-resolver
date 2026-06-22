@@ -67,7 +67,7 @@
     "jsii-docgen": "^10.5.0",
     "jsii-pacmak": "^1.136.0",
     "jsii-rosetta": "^5",
-    "projen": "^0.100.2",
+    "projen": "^0.100.4",
     "ts-jest": "^29",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
@@ -132,7 +132,7 @@
       "^.+\\.[t]sx?$": [
         "ts-jest",
         {
-          "tsconfig": "tsconfig.dev.json"
+          "tsconfig": "test/tsconfig.json"
         }
       ]
     }
