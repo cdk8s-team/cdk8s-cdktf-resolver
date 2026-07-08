@@ -373,13 +373,30 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev --filter=jsii,jsii-docgen,jsii-pacmak,jsii-rosetta,typescript"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev",
+            "--filter=jsii,jsii-docgen,jsii-pacmak,jsii-rosetta,typescript"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade jsii jsii-docgen jsii-pacmak jsii-rosetta typescript"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "jsii",
+            "jsii-docgen",
+            "jsii-pacmak",
+            "jsii-rosetta",
+            "typescript"
+          ]
         },
         {
           "exec": "npx projen"
@@ -397,13 +414,27 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev --filter=projen,@cdk8s/projen-common"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev",
+            "--filter=projen,@cdk8s/projen-common"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade projen @cdk8s/projen-common"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "projen",
+            "@cdk8s/projen-common"
+          ]
         },
         {
           "exec": "npx projen"
@@ -421,13 +452,45 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev --filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,cdk8s-cli,cdktf-cli,eslint-import-resolver-typescript,eslint-plugin-import,fs-extra,jest,jsii-diff,ts-jest,ts-node"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev,prod",
+            "--filter=@cdktf/provider-aws,@types/fs-extra,@types/jest,cdk8s-cli,cdktf-cli,eslint-import-resolver-typescript,eslint-plugin-import,fs-extra,jest,jsii-diff,ts-jest,ts-node"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @cdktf/provider-aws @stylistic/eslint-plugin @types/fs-extra @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser cdk8s-cli cdktf-cli commit-and-tag-version constructs eslint-import-resolver-typescript eslint-plugin-import eslint fs-extra jest jest-junit jsii-diff ts-jest ts-node"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "@cdktf/provider-aws",
+            "@stylistic/eslint-plugin",
+            "@types/fs-extra",
+            "@types/jest",
+            "@types/node",
+            "@typescript-eslint/eslint-plugin",
+            "@typescript-eslint/parser",
+            "cdk8s-cli",
+            "cdktf-cli",
+            "commit-and-tag-version",
+            "constructs",
+            "eslint-import-resolver-typescript",
+            "eslint-plugin-import",
+            "eslint",
+            "fs-extra",
+            "jest",
+            "jest-junit",
+            "jsii-diff",
+            "ts-jest",
+            "ts-node"
+          ]
         },
         {
           "exec": "npx projen"
