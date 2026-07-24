@@ -6068,10 +6068,10 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-projen@^0.101.17:
-  version "0.101.17"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.101.17.tgz#f78663e420915c48fd2951e98bbae9908cc4b509"
-  integrity sha512-qIuo1BiUWh/2nA0Y7ZTuopJjStvhkG5BFlWeIOBehfSQjc/bAJ1aPAbZ7ao2q5CMpN7PkFbvdzlJqJrHCFz+cg==
+projen@^0.101.20:
+  version "0.101.20"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.101.20.tgz#a81d3a7e19fbc0fe589152a7867492ba84b7a860"
+  integrity sha512-rQ0gy/4yGGcr50txthFg9F4LhL9eBORo0UG3n1Yg5GJ6Z7Kt4ju9F5TKjlXY799vZQaEEh7OqZiHegoqEVWycw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
