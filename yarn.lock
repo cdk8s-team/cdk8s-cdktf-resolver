@@ -2256,9 +2256,9 @@ cdk8s@^2.68.91:
     yaml "2.5.0"
 
 cdk8s@^2.70.95:
-  version "2.70.96"
-  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.70.96.tgz#7165fa8c1446454462a6b2202d7a5e79c3fb6e81"
-  integrity sha512-LkzyCTEKSmirdBk+7IoFUEWZhJY3GrKTkpmz+tugyQjNFaZLUBBqlBMRUrC/JVpWv5v50wFajlk2x3VDQh1fmQ==
+  version "2.70.97"
+  resolved "https://registry.yarnpkg.com/cdk8s/-/cdk8s-2.70.97.tgz#838aa0926ea30e10d48c234265322a2c109da43e"
+  integrity sha512-RaXceaNbqsSQL7LSvBKbrz1zd0xMcKc8injhoQsoF7d7Vz4kax56JQU/qZNMEyazS6rI5d4Ee5sNhJIlkhh0aQ==
   dependencies:
     fast-json-patch "^3.1.1"
     follow-redirects "^1.16.0"
@@ -3524,9 +3524,9 @@ fast-xml-parser@^5.5.6:
     xml-naming "^0.3.0"
 
 fastq@^1.6.0:
-  version "1.20.2"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.20.2.tgz#b762f46b4fa9c563adba6dd213a8984d8a5cd59f"
-  integrity sha512-UpGiiODyCGprM8EPP6JodP6jC9Rws6TCuiDOD+nn0CJhR8guI3g/ozo4ugL0vJ+Yz1UtJuuRPqvQuybVOF1VQA==
+  version "1.20.3"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.20.3.tgz#7ab8731e647b56abcfeee997dae333ca3ee1d04d"
+  integrity sha512-XKv5nnLs6nLF71NgiKJLIZFLkPyIEuOselLG7ujZnGrRfQK8HpvY+WqKhAJUAdLomwVHErVS4LfxFlPq0/FTAw==
   dependencies:
     reusify "^1.0.4"
 
@@ -5617,9 +5617,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 node-abi@^3.3.0:
-  version "3.95.0"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.95.0.tgz#93b2c83f95028586aec7ec606290b74dcd1dd9a2"
-  integrity sha512-T9iGctuocf0qIWFFOTxPzjT5q0SILqaBYXt272tlBHvTKC5+3JnkMirLxNJNkXHtFyBjU2Jx+NL4Zipr0B/c6Q==
+  version "3.96.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.96.0.tgz#8b038bc6cca97d6cec2e9aafdb81b900da1ff80d"
+  integrity sha512-rebQ/lz7i0EkoLzUVSrKRzA69zMkwLp95kKMWoMDkkM00Suxz0D7zEQPwRml5fQum24mj7bPvmlgLAmu2JCiYg==
   dependencies:
     semver "^7.3.5"
 
