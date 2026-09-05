@@ -6081,10 +6081,10 @@ process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha512-cdGef/drWFoydD1JsMzuFf8100nZl+GT+yacc2bEced5f9Rjk4z+WtFUTBu9PhOi9j/jfmBPu0mMEY4wIdAF8A==
 
-projen@^0.103.12:
-  version "0.103.12"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.103.12.tgz#bd47be1b3396380513037c16fa16167f898ae4cb"
-  integrity sha512-fPbwEtJV/c275ImzY4XJ+9IcV/ak1GtTmu85ye8TRYizFYXnr7KFqFZ0aXlFbq9evBi9KBUFaELMP4AMHhHFXQ==
+projen@^0.103.19:
+  version "0.103.19"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.103.19.tgz#dfccbf3c7d7f3bc962eda284389be517caf73405"
+  integrity sha512-vfXSicFngBmMtmIe+mOqrqLF+dfbmgey2jBp9KgkpqvGcvNddJmOsvXwg5dgfXaMpzH62gbTdFNT7unuakU8nw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
@@ -6112,9 +6112,9 @@ prompts@^2.0.1:
     sisteransi "^1.0.5"
 
 properties-file@^5.0.6:
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/properties-file/-/properties-file-5.0.6.tgz#a3dfcf181fe7b24cfdccd59d7d64d23ee8c4dcd6"
-  integrity sha512-vFWlFjA9mL18QZy2IafIL6P63XnR+/EfYDcPNz9qVkAehV1pGLaa+hOkv4EyXCvuMaQZgbKbziJBmFe39VCHdg==
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/properties-file/-/properties-file-5.0.7.tgz#9e3ea91e9acc013120a477de76e92f9a948f7f28"
+  integrity sha512-Hoae9SnNTJebHujv5gdOtb7stArj27GcKzWxerrQgjuHasE+VT7G10Q6rR2wRWTjaACkT4zRigAtqnkMOz9BIA==
 
 pump@^3.0.0:
   version "3.0.4"
