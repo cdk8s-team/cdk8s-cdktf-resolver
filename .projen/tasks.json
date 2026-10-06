@@ -379,7 +379,8 @@
         {
           "exec": "npx projen integ"
         }
-      ]
+      ],
+      "condition": "git log --oneline -1 | grep -v \"chore(release):\" > /dev/null"
     },
     "test": {
       "name": "test",
