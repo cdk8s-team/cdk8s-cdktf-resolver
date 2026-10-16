@@ -2048,9 +2048,9 @@ base64-js@^1.3.1:
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
 
 baseline-browser-mapping@^2.11.26:
-  version "2.11.28"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.28.tgz#784efec0fa3965c28a0bbb755f40604ace1c9db0"
-  integrity sha512-br0LOmjJqr6Rt4AEkadbcNf67Zpo7EPwKsWbjnRrJIa1QYFHQBqM4C7F2WTbV8ahTEcg1Eo+Y0aWjjORInYFyA==
+  version "2.11.29"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.29.tgz#dbed0ed2c17943aa4427863c91300865d9d8ca23"
+  integrity sha512-YeesxhUmR4h5y5V8KF8iBCqJb8YFrBJ++XBTeGcWIaQOYXGN19JM0FoiOjAhwuDoln8owMgXcWBmgHtYSkky2w==
 
 binary-extensions@^2.0.0:
   version "2.3.0"
@@ -2900,9 +2900,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.5.439:
-  version "1.5.456"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.456.tgz#cfa8b3b4c44450b8a28df4a7bc8be377cae1b691"
-  integrity sha512-8hboqI6xesozteFb8aa7OGknvxUtTeRJLz0FoePysUEh/oWbddykIGdgpEJRbPRg/nIMfBf2DFos+H2MtvJl2A==
+  version "1.5.458"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.458.tgz#fdc608c8ee26eeb4fa20b3447378c6c83a806a76"
+  integrity sha512-/hIH2gRSmxrf4/X4Nw/t/Wc8PVS22l8/3HnWjWTWsTOM5dsnMUPZF/+u+yr3LqweNuTBJE1rq6qAQzKkZVwMfA==
 
 emittery@^0.13.1:
   version "0.13.1"
@@ -5307,9 +5307,9 @@ no-case@^3.0.4:
     tslib "^2.0.3"
 
 node-abi@^3.3.0:
-  version "3.98.0"
-  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.98.0.tgz#3c7fe98381cf35f9da27431c9435044d9ebff143"
-  integrity sha512-Llh8noNw7s15m+rmIrZnZQbe4gLyasL9loT74rC92PkmwWKeEedKvc7o6pjp8B3MhrYT/Cl846NOYZbz1wmddw==
+  version "3.99.0"
+  resolved "https://registry.yarnpkg.com/node-abi/-/node-abi-3.99.0.tgz#0f976005a65876550058fed92a7b5c677d64f0f1"
+  integrity sha512-lLdwkeg2XUVPTHqWjPltTxH81zbQNbUWC+AEb9ni50KjxkUzAAx1HGtMT21sbntzfUGfIphhcklvs3imJeqDXw==
   dependencies:
     semver "^7.3.5"
 
